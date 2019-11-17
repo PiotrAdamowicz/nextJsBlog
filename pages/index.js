@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 
 const Index = () => (
   <Layout>
-    <h1>Hello Next.js</h1>
+    <h1>Hello Jacob</h1>
   </Layout>
 );
 
