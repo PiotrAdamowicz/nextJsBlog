@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
-// import NavBar from './NavBar'
+import Meta from "./meta";
 
 const layoutStyle = {
   margin: 20,
@@ -11,6 +11,7 @@ const layoutStyle = {
 const Layout = props => {
   return (
     <div style={layoutStyle}>
+      <Meta />
       <Header>działa</Header>
       {props.children}
       <Footer></Footer>
