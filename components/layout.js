@@ -2,15 +2,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Meta from "./meta";
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: "1px solid #DDD"
-};
-
 const Layout = props => {
   return (
-    <div style={layoutStyle}>
+    <div>
       <Meta />
       <Header>działa</Header>
       {props.children}

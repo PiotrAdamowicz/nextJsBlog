@@ -1,8 +1,9 @@
 import Layout from "../components/layout";
 
+// TODO:This is clonedfrom Google Docs  has no RWD would needarewrite from ground up
 const Cv = () => {
   return (
-    <>
+    <Layout>
       <section className="cvWraper">
         <p className="c20 c35">
           <span className="c6 c15" />
@@ -10,7 +11,7 @@ const Cv = () => {
         <table className="c14">
           <tbody>
             <tr className="c2">
-              <td className="c16" colspan="1" rowspan="1">
+              <td className="c16" colSpan="1" rowSpan="1">
                 <p className="c21 title" id="h.x8fm1uorkbaw">
                   <span className="c23 c26">Piotr Adamowicz</span>
                 </p>
@@ -18,7 +19,7 @@ const Cv = () => {
                   <span className="c0">Junior Front-End Developer</span>
                 </p>
               </td>
-              <td className="c25" colspan="1" rowspan="1">
+              <td className="c25" colSpan="1" rowSpan="1">
                 <p className="c7">
                   <span className="c0">Zag&oacute;rna 33/20</span>
                 </p>
@@ -37,7 +38,7 @@ const Cv = () => {
               </td>
             </tr>
             <tr className="c34">
-              <td className="c32" colspan="1" rowspan="1">
+              <td className="c32" colSpan="1" rowSpan="1">
                 <h1 className="c3" id="h.y7d3xdxnr44m">
                   <span className="c1">EXPERIENCE</span>
                 </h1>
@@ -143,7 +144,7 @@ const Cv = () => {
                   <span className="c6 c31" />
                 </p>
               </td>
-              <td className="c25" colspan="1" rowspan="1">
+              <td className="c25" colSpan="1" rowSpan="1">
                 <h1 className="c3" id="h.ca0awj8022e2">
                   <span className="c1">SKILLS</span>
                 </h1>
@@ -241,10 +242,13 @@ const Cv = () => {
       </section>
       <style jsx>
         {`
+          @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&display=swap");
           .cvWraper {
             display: flex;
+            justify-content: center;
+            width: auto;
           }
-          @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap&subset=latin-ext");
+
           ol {
             margin: 0;
             padding: 0;
@@ -284,6 +288,7 @@ const Cv = () => {
             border-left-style: solid;
             border-bottom-width: 0pt;
             width: 165pt;
+
             border-top-color: #ffffff;
             border-bottom-style: solid;
           }
@@ -329,7 +334,7 @@ const Cv = () => {
             text-decoration: none;
             vertical-align: baseline;
             font-size: 10pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             font-style: normal;
           }
           .c10 {
@@ -356,7 +361,7 @@ const Cv = () => {
             text-decoration: none;
             vertical-align: baseline;
             font-size: 12pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             font-style: italic;
           }
           .c0 {
@@ -389,7 +394,7 @@ const Cv = () => {
             text-decoration: none;
             vertical-align: baseline;
             font-size: 10pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             font-style: normal;
           }
           .c26 {
@@ -397,7 +402,7 @@ const Cv = () => {
             text-decoration: none;
             vertical-align: baseline;
             font-size: 32pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             font-style: normal;
           }
           .c28 {
@@ -421,7 +426,7 @@ const Cv = () => {
             text-decoration: none;
             vertical-align: baseline;
             font-size: 9pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             font-style: normal;
           }
           .c15 {
@@ -429,7 +434,7 @@ const Cv = () => {
             text-decoration: none;
             vertical-align: baseline;
             font-size: 6pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             font-style: normal;
           }
           .c27 {
@@ -472,7 +477,7 @@ const Cv = () => {
             text-decoration: none;
             vertical-align: baseline;
             font-size: 11pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
           }
           .c35 {
             padding-top: 6pt;
@@ -497,7 +502,6 @@ const Cv = () => {
           .c14 {
             border-spacing: 0;
             border-collapse: collapse;
-            margin-right: auto;
           }
           .c18 {
             background-color: #fff;
@@ -543,7 +547,7 @@ const Cv = () => {
             font-weight: 700;
             font-size: 36pt;
             padding-bottom: 6pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             line-height: 1;
             text-align: left;
           }
@@ -559,13 +563,13 @@ const Cv = () => {
           li {
             color: black;
             font-size: 9pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
           }
           p {
             margin: 0;
             color: black;
             font-size: 9pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
           }
           h1 {
             padding-top: 30pt;
@@ -583,7 +587,7 @@ const Cv = () => {
             font-weight: 700;
             font-size: 11pt;
             padding-bottom: 0pt;
-            font-family: "Merriweather";
+            font-family: "Merriweather Sans";
             line-height: 1;
             page-break-after: avoid;
             text-align: left;
@@ -634,7 +638,7 @@ const Cv = () => {
           }
         `}
       </style>
-    </>
+    </Layout>
   );
 };
 
