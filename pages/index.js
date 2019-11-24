@@ -4,11 +4,17 @@ import poohImg from "../img/pooh.jpg";
 const Index = () => (
   <>
     <Layout>
-      <h1>Hello Jacob</h1>
-      <img src={poohImg}></img>
+      <main>
+        <h1>Hello Jacob</h1>
+        <img src={poohImg}></img>
+      </main>
     </Layout>
-    <style jsx global>
-      {``}
+    <style jsx>
+      {`
+        main {
+          height: 70%;
+        }
+      `}
     </style>
   </>
 );

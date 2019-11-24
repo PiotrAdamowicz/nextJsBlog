@@ -1,4 +1,5 @@
 import NavBar from "./NavBar";
+import color from "../Utils/colors";
 
 const Header = () => {
   return (
@@ -6,15 +7,14 @@ const Header = () => {
       <header>
         <NavBar> </NavBar>
       </header>
-      <style>
+      <style jsx>
         {`
-          header{
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #DDD;
-            background-color: black;
+          header {
+            padding: 20px 5px;
+            background-color: ${color.main};
+            height: 15%;
           }
-      `}
+        `}
       </style>
     </>
   );

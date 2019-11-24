@@ -14,9 +14,11 @@ const Footer = () => {
       </footer>
       <style jsx>{`
         footer {
-          position: absolute;
+          /* position: absolute; */
           width: 100%;
-          bottom: 0;
+          height: 15%;
+          /* top: 411px;
+          left: 0; */
           background-color: ${color.main};
           display: flex;
           justify-content: center;
@@ -33,10 +35,10 @@ const Footer = () => {
         }
         a {
           line-height: 30px;
-          text-decoration: none;
+          /* text-decoration: none; */
           float: right;
           padding-right: 30px;
-          cursor: pointer;
+          /* cursor: pointer; */
         }
       `}</style>
     </>

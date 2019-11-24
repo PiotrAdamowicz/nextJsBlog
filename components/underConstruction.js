@@ -13,9 +13,16 @@ const UnderConstruction = () => {
         .underConstruction {
           margin: 10%;
           font-family: "Merriweather Sans", sans-serif;
+          line-height: 1.8rem;
         }
         img {
           margin: 10%;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        h3 {
+          font-size: 0.8rem;
         }
       `}</style>
     </>

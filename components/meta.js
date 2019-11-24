@@ -1,4 +1,5 @@
 import Head from "next/head";
+import color from "../Utils/colors";
 
 const Meta = () => (
   <div>
@@ -7,7 +8,7 @@ const Meta = () => (
       <meta charSet="utf-8" />
       <title>Adamowicz Piotr Developer Blog</title>
     </Head>
-    {/* FIXME: can't make global cursor: pointer work */}
+    {/* FIXME: Looks like id dosen't work on dev. On production it works */}
     <style jsx global>{`
       @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&display=swap");
       * {
@@ -18,6 +19,8 @@ const Meta = () => (
 
       body {
         font-family: "Merriweather Sans", sans-serif;
+        height: 100%;
+        background-color: ${color.background};
       }
       a {
         text-decoration: none;
