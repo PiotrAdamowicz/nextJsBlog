@@ -1,4 +1,5 @@
 import Link from "next/link";
+import colors from "../Utils/colors";
 
 const NavBar = () => {
   return (
@@ -26,7 +27,7 @@ const NavBar = () => {
           padding: auto;
           padding-right: 20px;
           font-family: "Merriweather Sans", sans-serif;
-          color: white;
+          color: ${colors.fontSmall};
         }
       `}</style>
     </>

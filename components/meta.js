@@ -7,10 +7,13 @@ const Meta = () => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <title>Adamowicz Piotr Developer Blog</title>
+      <link
+        href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet"
+      ></link>
     </Head>
     {/* FIXME: Looks like id dosen't work on dev. On production it works */}
     <style jsx global>{`
-      @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&display=swap");
       * {
         box-sizing: border-box;
         margin: 0;
@@ -18,7 +21,7 @@ const Meta = () => (
       }
 
       body {
-        font-family: "Merriweather Sans", sans-serif;
+        font-family: "Oswald", sans-serif;
         height: 100%;
         background-color: ${color.background};
       }
