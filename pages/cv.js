@@ -5,7 +5,7 @@ import image from "../img/PiotrAdamowiczSquare.png";
 const Cv = () => {
   return (
     <Layout>
-      <div className="page-wrap">
+      <main className="page-wrap">
         <div className="pic_container">
           <div className="pic_background">
             <img src={image} alt="Photo of Piotr Adamowicz" className="pic" />
@@ -90,15 +90,15 @@ const Cv = () => {
         <section className="skills">
           <h3>SKILLS</h3>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>MySQL</li>
-            <li>GraphQl</li>
-            <li>React</li>
-            <li>Git</li>
-            <li>RWD</li>
-            <li>Bootstrap</li>
+            <li>-HTML</li>
+            <li>-CSS</li>
+            <li>-JavaScript</li>
+            <li>-MySQL</li>
+            <li>-GraphQl</li>
+            <li>-React</li>
+            <li>-Git</li>
+            <li>-RWD</li>
+            <li>-Bootstrap</li>
           </ul>
         </section>
         <section className="languages">
@@ -112,8 +112,9 @@ const Cv = () => {
           <a href="https://github.com/PiotrAdamowicz">
             github.com/PiotrAdamowicz
           </a>
+          <br />
           <a href="https://www.facebook.com/piotr.adamowicz.927">
-            www.facebook.com/piotr.adamowicz.927
+            facebook.com/piotr.adamowicz.927
           </a>
         </section>
         <section className="interest">
@@ -123,8 +124,12 @@ const Cv = () => {
             one-pot cooking.
           </p>
         </section>
-      </div>
+      </main>
       <style jsx>{`
+        * {
+          word-wrap: break-word;
+          word-break: break-all;
+        }
         h1,
         h2,
         h3,
@@ -136,6 +141,7 @@ const Cv = () => {
         p,
         ul {
           color: ${colors.fontSmall};
+          list-style-type: none;
         }
 
         p {
@@ -144,18 +150,19 @@ const Cv = () => {
 
         .page-wrap {
           width: 100vw;
-          margin: 10%;
+          padding: 8%;
           display: grid;
-          grid-template-columns: 30% 60%;
+          grid-template-columns: 55% 35%;
           justify-content: stretch;
+          grid-row-gap: 15px;
           grid-template-areas:
             "pic pic"
             "contact contact"
             "objective objective"
             "education education"
             "experience experience"
-            "skills languages"
-            "skills links"
+            "languages skills"
+            "links skills"
             "interest interest";
         }
         .pic_container {
@@ -195,18 +202,22 @@ const Cv = () => {
         }
         .skills {
           grid-area: skills;
+           {
+            /* padding: 0 30%; */
+          }
+          justify-self: center;
         }
         .languages {
           grid-area: languages;
+          align-self: center;
           display: flex;
           flex-direction: column;
         }
         .links {
           grid-area: links;
-          word-wrap: break-word;
-          word-break: break-all;
-          display: flex;
-          flex-direction: column;
+        }
+        .links a {
+          font-size: 0.9rem;
         }
         .interest {
           grid-area: interest;
