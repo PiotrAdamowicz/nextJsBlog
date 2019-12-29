@@ -1,10 +1,10 @@
 const colors = {
-  main: "#282938",
-  main_op: "rgba(40, 41, 56, 0.9)",
+  main: "rgba(8, 15, 29, 1)", //"#282938",
+  main_op: "rgba(8, 15, 29, 0.7)",
   font: "white",
-  fontLarge: "#272727",
+  fontLarge: "rgba(121, 138, 141, 1)", //"#272727",
   fontMedium: "#435058",
-  fontSmall: "#e1f2fe", //"#e0ffff",
-  background: "#598b8c"
+  fontSmall: "rgb(200, 201, 204)", //"#e1f2fe", //"#e0ffff",
+  background: "rgba(45, 58, 68, 1)" //"#598b8c"
 };
 export default colors;

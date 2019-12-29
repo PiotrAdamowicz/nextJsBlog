@@ -167,8 +167,10 @@ const Cv = () => {
         }
         .pic_container {
           display: flex;
+
           justify-content: center;
           height: 220px;
+          width: 310px;
           grid-area: pic;
         }
         .pic_background {
