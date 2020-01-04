@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import colors from "../Utils/colors";
+import colors from "../Utils/colors.json";
 import image from "../img/PiotrAdamowiczSquare.png";
 
 const Cv = () => {
