@@ -1,6 +1,7 @@
 import Layout from "../components/layout";
 import colors from "../Utils/colors.json";
-import image from "../img/PiotrAdamowiczSquare.png";
+import imageSmall from "../img/PiotrAdamowiczSquare.png";
+import imageMedium from "../img/piotradamowiczMedium.png";
 
 const Cv = () => {
   return (
@@ -8,7 +9,18 @@ const Cv = () => {
       <main className="page-wrap">
         <div className="pic_container">
           <div className="pic_background">
-            <img src={image} alt="Photo of Piotr Adamowicz" className="pic" />
+            <picture>
+              <source
+                className="pic"
+                media="(min-width: 650px)"
+                srcset={imageMedium}
+              />
+              <img
+                className="pic"
+                src={imageSmall}
+                alt="Photo of Piotr Adamowicz"
+              />
+            </picture>
           </div>
         </div>
 
@@ -90,7 +102,16 @@ const Cv = () => {
         <section className="skills">
           <h3>SKILLS</h3>
           <ul>
-            <li>-HTML</li>
+            <li>
+              <picture>
+                <source
+                  media="(min-width: 800px)"
+                  srcset="https://www.freepik.com/free-icon/responsive-design_752749.html"
+                />
+                <img />
+              </picture>
+              -HTML
+            </li>
             <li>-CSS</li>
             <li>-JavaScript</li>
             <li>-MySQL</li>
@@ -128,14 +149,15 @@ const Cv = () => {
       <style jsx>{`
         * {
           word-wrap: break-word;
-          word-break: break-all;
         }
         h1,
-        h2,
-        h3,
-        h4 {
+        h3 {
           color: ${colors.fontLarge};
           font-weight: bold;
+        }
+        h2,
+        h4 {
+          color: ${colors.fontMedium};
         }
         span,
         p,
@@ -165,12 +187,10 @@ const Cv = () => {
             "links skills"
             "interest interest";
         }
+
         .pic_container {
           display: flex;
-
           justify-content: center;
-          height: 220px;
-          width: 310px;
           grid-area: pic;
         }
         .pic_background {
@@ -204,16 +224,11 @@ const Cv = () => {
         }
         .skills {
           grid-area: skills;
-           {
-            /* padding: 0 30%; */
-          }
           justify-self: center;
         }
         .languages {
           grid-area: languages;
           align-self: center;
-          display: flex;
-          flex-direction: column;
         }
         .links {
           grid-area: links;
@@ -223,6 +238,63 @@ const Cv = () => {
         }
         .interest {
           grid-area: interest;
+        }
+        @media (min-width: 650px) {
+          .page-wrap {
+            grid-template-columns: 50% 40%;
+            grid-template-areas:
+              "contact pic"
+              "contact pic"
+              "objective pic"
+              "education education"
+              "experience experience"
+              "languages skills"
+              "links skills"
+              "interest interest";
+          }
+          .pic_container {
+            display: flex;
+            width: 130%;
+            height: 100%;
+            justify-content: center;
+            grid-area: pic;
+          }
+          .pic_background {
+            height: 280px;
+            width: 220px;
+            background-color: ${colors.main_op};
+            border-radius: 50px;
+            position: relative;
+          }
+          .pic {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100%;
+            height: 100%;
+          }
+          .languages {
+            margin: 2% 10%;
+          }
+          .links {
+            margin: 2% 10%;
+          }
+        }
+        @media (min-width: 800px) {
+          .page-wrap {
+            padding: 10%;
+            grid-template-columns: 70% 20%;
+            grid-template-areas:
+              "contact pic"
+              "contact pic"
+              "objective pic"
+              "education skills"
+              "education languages"
+              "experience links"
+              "experience interest";
+          }
         }
       `}</style>
     </Layout>
