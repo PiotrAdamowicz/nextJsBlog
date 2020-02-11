@@ -1,4 +1,5 @@
-import Layout from "./layout";
+const windowHeight = document.windowHeight;
+const sectionHeigh = windowHeight * 0.8;
 
 const UnderConstruction = () => {
   return (
@@ -14,6 +15,7 @@ const UnderConstruction = () => {
           margin: 10%;
           font-family: "Merriweather Sans", sans-serif;
           line-height: 1.8rem;
+          min-height: ${sectionHeigh}px;
         }
         img {
           margin: 10%;

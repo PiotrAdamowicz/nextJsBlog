@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 import Link from "next/link";
-import fetch from "isomorphic-unfetch";
+import colors from "../Utils/colors";
 
 const PostLink = ({ props }) => (
   <li>
@@ -13,7 +13,7 @@ const PostLink = ({ props }) => (
 export default function Blog(props) {
   return (
     <Layout>
-      <h1>Batman TV Shows</h1>
+      <h1>Peter's blog</h1>
       <ul>
         {props.shows.map(show => (
           <li key={show.id}>
@@ -28,6 +28,16 @@ export default function Blog(props) {
         a {
           font-family: "Arial";
         }
+        h1 {
+          color: ${colors.fontLarge};
+        }
+        a {
+          color: ${colors.fontSmall};
+          text-decoration: none;
+        }
+        a:hover {
+          opacity: 0.6;
+        }
 
         ul {
           padding: 0;
@@ -37,27 +47,7 @@ export default function Blog(props) {
           list-style: none;
           margin: 5px 0;
         }
-
-        a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        a:hover {
-          opacity: 0.6;
-        }
       `}</style>
     </Layout>
   );
 }
-
-Blog.getInitialProps = async function() {
-  const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
-  const data = await res.json();
-
-  console.log(`Show data fetched. Count: ${data.length}`);
-
-  return {
-    shows: data.map(entry => entry.show)
-  };
-};

@@ -13,6 +13,7 @@ const Header = () => {
             padding: 20px 5px;
             background-color: ${color.main};
             height: 15%;
+            width: 100%;
           }
         `}
       </style>
