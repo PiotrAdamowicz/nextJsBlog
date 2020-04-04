@@ -29,7 +29,8 @@ const Cv = () => {
           <h2>Junior Front-end Developer</h2>
 
           <p>
-            <span className="adress">Zagórna 33/20 15-820 Białystok</span>
+            <span className="adress">Zagórna 33/20 15-820 Białystok</span>{" "}
+            <br></br>
             Cell: <span className="tel">506-586-928</span>
             <br />
             <span>

@@ -12,7 +12,6 @@ const Meta = () => (
         rel="stylesheet"
       ></link>
     </Head>
-    {/* FIXME: Looks like id dosen't work on dev. On production it works */}
     <style jsx global>{`
       * {
         box-sizing: border-box;
