@@ -2,27 +2,11 @@ import Layout from "../components/layout";
 import Link from "next/link";
 import colors from "../Utils/colors";
 
-const PostLink = ({ props }) => (
-  <li>
-    <Link href="/p/[id]" as={`/p/${props.id}`}>
-      <a>{props.id}</a>
-    </Link>
-  </li>
-);
-
 export default function Blog(props) {
   return (
     <Layout>
       <h1>Peter's blog</h1>
-      <ul>
-        {props.shows.map(show => (
-          <li key={show.id}>
-            <Link href="/p/[id]" as={`/p/${show.id}`}>
-              <a>{show.name}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <ul>Empty for now</ul>
       <style jsx>{`
         h1,
         a {
