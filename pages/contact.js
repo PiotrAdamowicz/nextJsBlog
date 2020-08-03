@@ -1,4 +1,5 @@
 import Layout from "../components/layout";
+import ContactForm from "../components/ContactForm";
 import { useForm } from "react-hook-form"; //Will see if it's needed
 
 /*
@@ -9,14 +10,12 @@ https://stadtteilliebe.de/blog/serverless-contact-form
 
 // import UnderConstruction from "../components/underConstruction";
 
-
+const contact = () => {
   return (
     <>
       <Layout>
         <main>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <label>Empty for now</label>
-          </form>
+          <ContactForm></ContactForm>
           {/* <UnderConstruction></UnderConstruction> */}
         </main>
       </Layout>
@@ -25,4 +24,4 @@ https://stadtteilliebe.de/blog/serverless-contact-form
   );
 };
 
-export default Contact;
+export default contact;
