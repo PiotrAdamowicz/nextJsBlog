@@ -26,7 +26,9 @@ const NavBar = () => {
           text-decoration: none;
           padding: auto;
           padding-right: 20px;
-          font-family: "Merriweather Sans", sans-serif;
+           {
+            /* font-family: "Merriweather Sans", sans-serif; */
+          }
           color: ${colors.fontSmall};
         }
       `}</style>

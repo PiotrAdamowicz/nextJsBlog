@@ -13,7 +13,7 @@ const Cv = () => {
               <source
                 className="pic"
                 media="(min-width: 650px)"
-                srcset={imageMedium}
+                srcSet={imageMedium}
               />
               <img
                 className="pic"
@@ -107,7 +107,7 @@ const Cv = () => {
               <picture>
                 <source
                   media="(min-width: 800px)"
-                  srcset="https://www.freepik.com/free-icon/responsive-design_752749.html"
+                  srcSet="https://www.freepik.com/free-icon/responsive-design_752749.html"
                 />
                 <img />
               </picture>
@@ -151,6 +151,9 @@ const Cv = () => {
         * {
           word-wrap: break-word;
         }
+        .email {
+          color: ${colors.fontSmall};
+        }
         h1,
         h3 {
           color: ${colors.fontLarge};
@@ -172,7 +175,7 @@ const Cv = () => {
         }
 
         .page-wrap {
-          width: 100vw;
+          width: 100%;
           padding: 8%;
           display: grid;
           grid-template-columns: 55% 35%;
