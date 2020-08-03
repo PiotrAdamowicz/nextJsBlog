@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"; //Will see if it's needed
 
 /*
 There will be few branches for contact forms to try out the best.
@@ -9,9 +9,6 @@ https://stadtteilliebe.de/blog/serverless-contact-form
 
 // import UnderConstruction from "../components/underConstruction";
 
-const Contact = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
 
   return (
     <>
