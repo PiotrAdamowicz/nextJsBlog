@@ -1,8 +1,6 @@
 import Layout from "../components/layout";
 import Contact from "../components/Contact";
-import { useForm } from "react-hook-form";
 
-// import UnderConstruction from "../components/underConstruction";
 const contact = () => {
   return (
     <>
