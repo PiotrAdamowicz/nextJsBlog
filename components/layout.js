@@ -2,14 +2,22 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Meta from "./meta";
 
-const Layout = props => {
+const Layout = (props) => {
   return (
-    <div>
+    <>
       <Meta />
-      <Header>działa</Header>
-      {props.children}
+      <Header></Header>
+      <main>{props.children}</main>
       <Footer></Footer>
-    </div>
+
+      <style jsx>
+        {`
+          main {
+            min-height: 77%;
+          }
+        `}
+      </style>
+    </>
   );
 };
 

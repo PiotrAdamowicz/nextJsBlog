@@ -14,21 +14,21 @@ const NavBar = () => {
         <Link href="/portfolio">
           <a>Portfolio</a>
         </Link>
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>
         <Link href="/cv">
           <a>Resume</a>
         </Link>
+        <Link href="/contact">
+          <a>Contact</a>
+        </Link>
       </nav>
       <style jsx>{`
+        nav {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+        }
         a {
           text-decoration: none;
-          padding: auto;
-          padding-right: 20px;
-           {
-            /* font-family: "Merriweather Sans", sans-serif; */
-          }
           color: ${colors.fontSmall};
         }
       `}</style>

@@ -5,9 +5,7 @@ const contact = () => {
   return (
     <>
       <Layout>
-        <main>
-          <Contact></Contact>
-        </main>
+        <Contact></Contact>
       </Layout>
       <style jsx>{``}</style>
     </>

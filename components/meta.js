@@ -2,7 +2,7 @@ import Head from "next/head";
 import color from "../Utils/colors";
 
 const Meta = () => (
-  <div>
+  <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
@@ -24,12 +24,21 @@ const Meta = () => (
         height: 100%;
         background-color: ${color.background};
       }
+      #__next{
+        height: inherit;
+      }
       a {
         text-decoration: none;
         color: white;
         cursor: pointer;
       }
+
+      @media (min-width: 360px) and (orientation: portrait) {
+        body {
+          height: 640px;
+        }
+      }
     `}</style>
-  </div>
+  </>
 );
 export default Meta;

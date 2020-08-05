@@ -15,7 +15,7 @@ const Footer = () => {
       <style jsx>{`
         footer {
           width: 100%;
-          height: 13%;
+          height: 10%;
           background-color: ${color.main};
           display: flex;
           justify-content: center;

@@ -10,9 +10,11 @@ const Header = () => {
       <style jsx>
         {`
           header {
-            padding: 20px 5px;
+            padding: 7% 5%;
             background-color: ${color.main};
-            height: 15%;
+            display: flex;
+            justify-content: center;
+            height: 12%;
             width: 100%;
           }
         `}
