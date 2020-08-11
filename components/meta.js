@@ -24,19 +24,12 @@ const Meta = () => (
         height: 100%;
         background-color: ${color.background};
       }
-      #__next{
+      #__next {
         height: inherit;
       }
       a {
         text-decoration: none;
-        color: white;
         cursor: pointer;
-      }
-
-      @media (min-width: 360px) and (orientation: portrait) {
-        body {
-          height: 640px;
-        }
       }
     `}</style>
   </>

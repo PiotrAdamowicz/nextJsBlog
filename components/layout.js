@@ -10,13 +10,7 @@ const Layout = (props) => {
       <main>{props.children}</main>
       <Footer></Footer>
 
-      <style jsx>
-        {`
-          main {
-            min-height: 77%;
-          }
-        `}
-      </style>
+      <style jsx>{``}</style>
     </>
   );
 };

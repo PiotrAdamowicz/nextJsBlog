@@ -12,31 +12,7 @@ const Footer = () => {
           </Link>
         </div>
       </footer>
-      <style jsx>{`
-        footer {
-          width: 100%;
-          height: 10%;
-          background-color: ${color.main};
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-        }
-        p {
-          color: ${color.font};
-          padding: 10px 10px;
-        }
-        div {
-          width: 100%;
-          height: 30px;
-          background-color: ${color.main};
-        }
-        a {
-          line-height: 30px;
-          float: right;
-          padding-right: 30px;
-          cursor: pointer;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </>
   );
 };

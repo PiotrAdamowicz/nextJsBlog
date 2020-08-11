@@ -16,6 +16,9 @@ const Contact = () => {
         method="post"
       >
         <fieldset id="fs-frm-inputs">
+          <legend>
+            If you want to contact me just fill up the form belowe:
+          </legend>
           <label htmlFor="full-name">Full Name</label>
           <input
             ref={register}
@@ -52,48 +55,7 @@ const Contact = () => {
         </fieldset>
         <input className="submitBtn" type="submit" value="Submit" />
       </form>
-      <style jsx>{`
-        form {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          margin: 5%;
-          min-height: 77%;
-        }
-        fieldset {
-          display: flex;
-          flex-direction: column;
-          border: none;
-          margin-bottom: 2%;
-          padding: 0;
-        }
-        label {
-          margin-bottom: 2%;
-        }
-        input {
-          background-color: ${colors.fontMedium};
-          border: none;
-          min-height: 15%;
-          font-family: "Oswald", sans-serif;
-           {
-            /*need something better; Font*/
-          }
-          margin-bottom: 2%;
-        }
-        textarea {
-          background-color: ${colors.fontMedium};
-
-          border: none;
-        }
-        .submitBtn {
-           {
-            /* margin-top: 4%; */
-          }
-          min-height: 15%;
-          cursor: pointer;
-          border-radius: 10px;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </>
   );
 };

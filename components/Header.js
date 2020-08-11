@@ -7,18 +7,7 @@ const Header = () => {
       <header>
         <NavBar> </NavBar>
       </header>
-      <style jsx>
-        {`
-          header {
-            padding: 7% 5%;
-            background-color: ${color.main};
-            display: flex;
-            justify-content: center;
-            height: 12%;
-            width: 100%;
-          }
-        `}
-      </style>
+      <style jsx>{``}</style>
     </>
   );
 };
