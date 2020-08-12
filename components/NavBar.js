@@ -21,7 +21,19 @@ const NavBar = () => {
           <a>Contact</a>
         </Link>
       </nav>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        nav {
+          display: flex;
+          background-color: ${colors.main_op2};
+          justify-content: space-around;
+          width: 100%;
+        }
+        a {
+          display: block;
+          line-height: 3.5em;
+          color: ${colors.font.fn.navStandard};
+        }
+      `}</style>
     </>
   );
 };

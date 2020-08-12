@@ -7,7 +7,11 @@ const Header = () => {
       <header>
         <NavBar> </NavBar>
       </header>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        header {
+          height: 100;
+        }
+      `}</style>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import color from "../Utils/colors";
+import colors from "../Utils/colors";
 
 const Footer = () => {
   return (
@@ -12,7 +12,21 @@ const Footer = () => {
           </Link>
         </div>
       </footer>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        footer {
+          display: flex;
+          background-color: ${colors.main_op2};
+          justify-content: space-around;
+          width: 100%;
+        }
+        a,
+        p {
+          display: block;
+          font-size: 1em;
+          line-height: 3.5em;
+          color: ${colors.font.fn.navStandard};
+        }
+      `}</style>
     </>
   );
 };

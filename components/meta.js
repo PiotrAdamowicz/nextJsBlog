@@ -25,6 +25,8 @@ const Meta = () => (
         background-color: ${color.background};
       }
       #__next {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
         height: inherit;
       }
       a {

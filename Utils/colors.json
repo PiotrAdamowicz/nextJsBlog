@@ -1,10 +1,17 @@
 {
+  "font": {
+    "tx": {
+      "fontLarge": "rgba(121, 138, 141, 1)",
+      "fontMedium": "#435058",
+      "fontSmall": "rgb(200, 201, 204)"
+    },
+    "fn": {
+      "navStandard": "rgba(231, 232, 235, 1)"
+    }
+  },
   "main": "rgba(8, 15, 29, 1)",
   "main_op": "rgba(8, 15, 29, 0.7)",
-  "font": "white",
-  "fontLarge": "#6C8CA1FF",
-  "fontMedium": "#647E8FCC",
-  "fontSmall": "rgb(200, 201, 204)",
-  "background": "rgba(45, 58, 68, 1)",
-  "btnSubmit": "rgba(45, 58, 68, .8)"
+  "main_op2": "rgba(8, 15, 29, 0.4)",
+
+  "background": "rgba(45, 58, 68, 1)"
 }
