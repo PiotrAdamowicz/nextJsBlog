@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import colors from "../Utils/colors.json";
+import colors from "../Utils/colors";
 import imageSmall from "../img/PiotrAdamowiczSquare.png";
 import imageMedium from "../img/piotradamowiczMedium.png";
 
