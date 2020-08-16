@@ -115,7 +115,6 @@ const Cv = () => {
             </li>
             <li>-CSS</li>
             <li>-JavaScript</li>
-            <li>-MySQL</li>
             <li>-GraphQl</li>
             <li>-React</li>
             <li>-Git</li>
