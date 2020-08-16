@@ -1,9 +1,32 @@
 import Layout from "../components/layout";
 import colors from "../Utils/colors";
+import textCV from "../Utils/textContent/cv/textCV";
 import imageSmall from "../img/PiotrAdamowiczSquare.png";
 import imageMedium from "../img/piotradamowiczMedium.png";
 
 const Cv = () => {
+  const {
+    contactInfo: { name, position, address, phone, email },
+    objective,
+    education: {
+      school1: { school1, schoolDuration1, educationDetails1 },
+      school2: { school2, schoolDuration2, educationDetails2 },
+      school3: { school3, schoolDuration3, educationDetails3 },
+      school4: { school4, schoolDuration4, educationDetails4 },
+      school5: { school5, schoolDuration5, educationDetails5 },
+    },
+    experience: {
+      job1: { jobName1, jobDuration1, jobDetails1 },
+      job2: { jobName2, jobDuration2, jobDetails2 },
+    },
+    skills,
+    languages: { english, javaScript },
+    links: {
+      link1: { link1, linkName1 },
+      link2: { link2, linkName2 },
+    },
+    interests,
+  } = textCV;
   return (
     <Layout>
       <main className="page-wrap">
@@ -15,135 +38,80 @@ const Cv = () => {
                 media="(min-width: 650px)"
                 srcSet={imageMedium}
               />
-              <img
-                className="pic"
-                src={imageSmall}
-                alt="Photo of Piotr Adamowicz"
-              />
+              <img className="pic" src={imageSmall} alt={"Photo of " + name} />
             </picture>
           </div>
         </div>
 
         <div className="contact-info">
-          <h1 className="fn">Piotr Adamowicz</h1>
-          <h2>Junior Front-end Developer</h2>
+          <h1 className="fn">{name}</h1>
+          <h2>{position}</h2>
 
           <p>
-            <span className="adress">Zagórna 33/20 15-820 Białystok</span>{" "}
-            <br></br>
-            Cell: <span className="tel">506-586-928</span>
+            <span className="address">{address}</span> <br></br>
+            Cell: <span className="phone">{phone}</span>
             <br />
             <span>
               Email:{" "}
-              <a className="email" href="adamowicz.piotr2@gmail.com">
-                adamowicz.piotr2@gmail.com
+              <a className="email" href={email}>
+                {email}
               </a>
             </span>
           </p>
         </div>
 
         <div className="objective">
-          <p>
-            I am an outgoing and energetic developer, seeking a career in IT
-            industry. My focus of interest include front-end technologies as
-            well as surounding back-end, database and designe topics.
-          </p>
+          <p>{objective}</p>
         </div>
         <section className="education">
           <h3>EDUCATION</h3>
-          <h4>VII high school, Białystok</h4>
-          <p className="duration">2006 - 2009</p>
-          <p className="details">
-            I’ve graduated in 2009 from mathematics and Informatics profile.
-          </p>
-          <h4>
-            Information Technology at Department of Faculty of Computer Science,
-            Białystok
-          </h4>
-          <p className="duration">2009</p>
-          <p className="details">
-            Basic knowledge of computer technologies. Curriculum included basics
-            of C/C++ programing language, basics of binary numbers and higher
-            mathematics. Unfinished first semester.
-          </p>
-          <h4>
-            Management at Department of Management and Marketing, Białystok
-          </h4>
-          <p className="duration">2010 - 2013</p>
-          <p className="details">
-            Curriculum included basics of Economy, Management, Marketing .
-            Unfinished first degree.
-          </p>
-          <h4>
-            “Od podstaw do pierwszej pracy jako Front-End Developer”, Bartłomiej
-            Borowczyk
-          </h4>
-          <p className="duration">2018 - 2019</p>
-          <p className="details">
-            Series of courses on Udemy platform at the moment covered basics of:
-            HTML5, CSS3, JavaScript, React js, Node.js.
-          </p>
+          <h4>{school5}</h4>
+          <p className="duration">{schoolDuration5}</p>
+          <p className="details">{educationDetails5}</p>
+          <h4>{school4}</h4>
+          <p className="duration">{schoolDuration4}</p>
+          <p className="details">{educationDetails4}</p>
+          <h4>{school3}</h4>
+          <p className="duration">{schoolDuration3}</p>
+          <p className="details">{educationDetails3}</p>
+          <h4>{school2}</h4>
+          <p className="duration">{schoolDuration2}</p>
+          <p className="details">{educationDetails2}</p>
+          <h4>{school1}</h4>
+          <p className="duration">{schoolDuration1}</p>
+          <p className="details">{educationDetails1}</p>
         </section>
         <section className="experience">
           <h3>EXPERIENCE</h3>
-          <h4>SP MSWIA, Białystok – paramedic</h4>
-          <p className="duration">02.2019 – PRESENT</p>
-          <p className="details">
-            My main line of work is: transport of patients, medical samples, lab
-            results and supplies. I work at Geriatrics ward.
-          </p>
-          <h4>MEDASSIST SP Z O O, Białystok – paramedic</h4>
-          <p className="duration">04.2016 – 01.2019</p>
-          <p className="details">
-            My main line of work was: transport of patients, medical samples,
-            lab results and supplies. I’ve worked at Children's Hospital
-            Emergency ward.
-          </p>
+          <h4>{jobName2}</h4>
+          <p className="duration">{jobDuration2}</p>
+          <p className="details">{jobDetails2}</p>
+          <h4>{jobName1}</h4>
+          <p className="duration">{jobDuration1}</p>
+          <p className="details">{jobDetails1}</p>
         </section>
         <section className="skills">
           <h3>SKILLS</h3>
           <ul>
-            <li>
-              <picture>
-                <source
-                  media="(min-width: 800px)"
-                  srcSet="https://www.freepik.com/free-icon/responsive-design_752749.html"
-                />
-                <img />
-              </picture>
-              -HTML
-            </li>
-            <li>-CSS</li>
-            <li>-JavaScript</li>
-            <li>-GraphQl</li>
-            <li>-React</li>
-            <li>-Git</li>
-            <li>-RWD</li>
-            <li>-Bootstrap</li>
+            {skills.map((skill) => (
+              <li className={skill}>{skill}</li>
+            ))}
           </ul>
         </section>
         <section className="languages">
           <h3>LANGUAGES</h3>
-          <p className="details">
-            Communicative english in speech and writing, level B2.
-          </p>
+          <p className="details">{english}</p>
+          <p className="details">{javaScript}</p>
         </section>
         <section className="links">
           <h3>LINKS</h3>
-          <a href="https://github.com/PiotrAdamowicz">
-            github.com/PiotrAdamowicz
-          </a>
+          <a href={link1}>{linkName1}</a>
           <br />
-          <a href="https://www.facebook.com/piotr.adamowicz.927">
-            facebook.com/piotr.adamowicz.927
-          </a>
+          <a href={link2}>{linkName2}</a>
         </section>
         <section className="interest">
           <h3>INTERESTS</h3>
-          <p className="details">
-            In-line skating, music, reading (s-f urban fantasy), origami,
-            one-pot cooking.
-          </p>
+          <p className="details">{interests}</p>
         </section>
       </main>
       <style jsx>{`
