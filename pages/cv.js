@@ -1,9 +1,12 @@
 import Layout from "../components/layout";
-import colors from "../Utils/colors.json";
+
+import colors from "../Utils/colors";
 import imageSmall from "../img/PiotrAdamowiczSquare.png";
 import imageMedium from "../img/piotradamowiczMedium.png";
 
 const Cv = () => {
+  const { fontLarge, fontMedium, fontSmall } = colors.font.tx;
+
   return (
     <Layout>
       <main className="page-wrap">
@@ -86,18 +89,18 @@ const Cv = () => {
         </section>
         <section className="experience">
           <h3>EXPERIENCE</h3>
+          <h4>COMPUTARIS , Białystok – 1st line engineer</h4>
+          <p className="duration">02.2020 – 08.2020</p>
+          <p className="details">
+            My main line of work was: monitoring, diagnosing mobile payments
+            system and supporting second line engineers, merchants and
+            operators.
+          </p>
           <h4>SP MSWIA, Białystok – paramedic</h4>
           <p className="duration">02.2019 – PRESENT</p>
           <p className="details">
             My main line of work is: transport of patients, medical samples, lab
             results and supplies. I work at Geriatrics ward.
-          </p>
-          <h4>MEDASSIST SP Z O O, Białystok – paramedic</h4>
-          <p className="duration">04.2016 – 01.2019</p>
-          <p className="details">
-            My main line of work was: transport of patients, medical samples,
-            lab results and supplies. I’ve worked at Children's Hospital
-            Emergency ward.
           </p>
         </section>
         <section className="skills">
@@ -135,7 +138,7 @@ const Cv = () => {
           </a>
           <br />
           <a href="https://www.facebook.com/piotr.adamowicz.927">
-            facebook.com/piotr.adamowicz.927
+            facebook.com/piotr.adamowicz
           </a>
         </section>
         <section className="interest">
@@ -151,21 +154,21 @@ const Cv = () => {
           word-wrap: break-word;
         }
         .email {
-          color: ${colors.fontSmall};
+          color: ${fontSmall};
         }
         h1,
         h3 {
-          color: ${colors.fontLarge};
+          color: ${fontLarge};
           font-weight: bold;
         }
         h2,
         h4 {
-          color: ${colors.fontMedium};
+          color: ${fontMedium};
         }
         span,
         p,
         ul {
-          color: ${colors.fontSmall};
+          color: ${fontSmall};
           list-style-type: none;
         }
 
@@ -305,3 +308,4 @@ const Cv = () => {
 };
 
 export default Cv;
+// TODO: workout and finish graphic Layout and fonts & section colors then worry about light mode

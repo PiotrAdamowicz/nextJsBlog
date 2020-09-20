@@ -19,5 +19,3 @@ const colors = {
   background: "rgba(45, 58, 68, 1)", //"#598b8c"
 };
 export default colors;
-// I'm gonna try som fuction specifin colors in nested objects like : btn or nav and
-// then try to focuse on few colors for main elements.
