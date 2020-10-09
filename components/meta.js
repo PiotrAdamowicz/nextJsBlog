@@ -12,28 +12,7 @@ const Meta = () => (
         rel="stylesheet"
       ></link>
     </Head>
-    <style jsx global>{`
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: "Oswald", sans-serif;
-        height: 100%;
-        background-color: ${color.background};
-      }
-      #__next {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        height: inherit;
-      }
-      a {
-        text-decoration: none;
-        cursor: pointer;
-      }
-    `}</style>
+    <style jsx global>{``}</style>
   </>
 );
 export default Meta;

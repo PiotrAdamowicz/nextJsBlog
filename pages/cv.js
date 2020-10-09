@@ -29,14 +29,12 @@ const Cv = () => {
           <h2>Junior Front-end Developer</h2>
 
           <p>
-            <span className="adress">Zagórna 33/20 15-820 Białystok</span>{" "}
-            <br></br>
             Cell: <span className="tel">506-586-928</span>
             <br />
             <span>
               Email:{" "}
               <a className="email" href="adamowicz.piotr2@gmail.com">
-                adamowicz.piotr2@gmail.com
+                adamowicz.piotr2[at]gmail.com
               </a>
             </span>
           </p>
