@@ -1,0 +1,45 @@
+main.page_wrap {
+  display: grid;
+  padding: 15% 10%;
+  text-align: justify;
+  grid-template-columns: 35% 35%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "pic pic"
+    "contact contact"
+    "objective objective"
+    "education education"
+    "experience experience"
+    "skills languages"
+    " links links"
+    "interest interest";
+}
+.pic_container {
+  grid-area: pic;
+  width: 100%;
+}
+.contact_info {
+  grid-area: contact;
+  width: 100%;
+}
+.objective {
+  grid-area: objective;
+}
+.education {
+  grid-area: education;
+}
+.experience {
+  grid-area: experience;
+}
+.skills {
+  grid-area: skills;
+}
+.languages {
+  grid-area: languages;
+}
+.links {
+  grid-area: links;
+}
+.interest {
+  grid-area: interest;
+}
