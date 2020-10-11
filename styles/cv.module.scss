@@ -17,6 +17,11 @@ main.page_wrap {
 .pic_container {
   grid-area: pic;
   width: 100%;
+  & > .pic_background {
+    background-color: #3c444d;
+    height: 100%;
+    border-radius: 20px;
+  }
 }
 .contact_info {
   grid-area: contact;
