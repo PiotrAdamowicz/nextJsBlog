@@ -1,0 +1,24 @@
+.pic_container {
+  display: flex;
+  justify-content: center;
+  grid-area: pic;
+  width: 100%;
+  position: relative;
+  & > img,
+  & > source {
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 94px;
+  }
+}
+.pic_container::after {
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 94px;
+  background-image: linear-gradient(#30363d, rgba(0, 0, 0, 0.541), #30363d);
+  background-color: black;
+}
