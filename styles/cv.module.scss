@@ -35,6 +35,18 @@ main.page_wrap {
     "skills skills"
     "interest interest"
     "links links";
+  .section_header {
+    margin-bottom: $margin-bottom-10;
+    @include section_header__bg;
+  }
+
+  & > section > h4,
+  p {
+    margin-bottom: $margin-bottom-2;
+  }
+  .details {
+    margin-bottom: $margin-bottom-10;
+  }
 }
 .contact_info {
   grid-area: contact;
@@ -60,14 +72,21 @@ main.page_wrap {
   grid-area: education;
   margin-bottom: $margin-bottom-10;
   & > .section_header {
-    margin-bottom: $margin-bottom-5;
+    margin-bottom: $margin-bottom-10;
     @include section_header__bg;
   }
   & > .school {
     margin-bottom: $margin-bottom-2;
   }
   & > .duration {
-    margin-bottom: 2%;
+    margin-bottom: $margin-bottom-2;
+  }
+  & > h4,
+  p {
+    margin-bottom: $margin-bottom-2;
+  }
+  & > .details {
+    margin-bottom: $margin-bottom-10;
   }
 }
 .experience {
@@ -93,19 +112,26 @@ main.page_wrap {
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
     @include section_header__bg;
+    margin-bottom: $margin-bottom-5;
+  }
+  & > p {
+    text-align: center;
   }
 }
 .skills {
   grid-area: skills;
   margin-bottom: $margin-bottom-10;
-  & > .section_header__bg {
+  .section_header__bg {
     @include section_header__bg;
+    margin-bottom: $margin-bottom-5;
   }
   .list {
     @include list-container;
   }
-  & > .list_element {
+  .list_element {
     margin-bottom: $margin-bottom-5;
+    align-items: center;
+    text-align: center;
   }
 }
 .links {
@@ -113,6 +139,7 @@ main.page_wrap {
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
     @include section_header__bg;
+    margin-bottom: $margin-bottom-5;
   }
 }
 .interest {
@@ -120,6 +147,7 @@ main.page_wrap {
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
     @include section_header__bg;
+    margin-bottom: $margin-bottom-5;
     font-size: 19px;
     line-height: 28px;
   }
