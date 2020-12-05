@@ -34,19 +34,19 @@ const Cv = () => {
       <main className={styles.page_wrap}>
         <Picture></Picture>
         <div className={styles.contact_info}>
-          <h1 className={styles.fn}>Piotr Adamowicz</h1>
-          <h2 className={styles.position}>Junior Front-end Developer</h2>
+          <h1 className={styles.fn}>{name}</h1>
+          <h2 className={styles.position}>{position}</h2>
 
           <p className={styles.paragraph}>
             Cell:{" "}
             <span className={styles.phone_email} className={styles.tel}>
-              506-586-928
+              {phone}
             </span>
             <br />
             <span className={styles.phone_email}>
               Email:{" "}
               <a className={styles.email} href="adamowicz.piotr2@gmail.com">
-                adamowicz.piotr2[at]gmail.com
+                {email}
               </a>
             </span>
           </p>
@@ -58,45 +58,33 @@ const Cv = () => {
 
         <section className={styles.education}>
           <h3 className={styles.section_header}>EDUCATION</h3>
-          <h4 className={styles.school}>VII high school, Białystok</h4>
+          <h4 className={styles.school}>{school1}</h4>
           <p className={styles.paragraph} className={styles.duration}>
-            2006_2009
+            {schoolDuration1}
           </p>
           <p className={styles.paragraph} className={styles.details}>
-            I’ve graduated in 2009 from mathematics and Informatics profile.
+            {educationDetails1}
           </p>
-          <h4 className={styles.school}>
-            Information Technology at Department of Faculty of Computer Science,
-            Białystok
-          </h4>
+          <h4 className={styles.school}>{school2}</h4>
           <p className={styles.paragraph} className={styles.duration}>
-            2009
+            {schoolDuration2}
           </p>
           <p className={styles.paragraph} className={styles.details}>
-            Basic knowledge of computer technologies. Curriculum included basics
-            of C/C++ programing language, basics of binary numbers and higher
-            mathematics. Unfinished first semester.
+            {educationDetails2}
           </p>
-          <h4 className={styles.school}>
-            Management at Department of Management and Marketing, Białystok
-          </h4>
+          <h4 className={styles.school}>{school3}</h4>
           <p className={styles.paragraph} className={styles.duration}>
-            2010_2013
+            {schoolDuration3}
           </p>
           <p className={styles.paragraph} className={styles.details}>
-            Curriculum included basics of Economy, Management, Marketing .
-            Unfinished first degree.
+            {educationDetails3}
           </p>
-          <h4 className={styles.school}>
-            “Od podstaw do pierwszej pracy jako Front-End Developer”, Bartłomiej
-            Borowczyk
-          </h4>
+          <h4 className={styles.school}>{school4}</h4>
           <p className={styles.paragraph} className={styles.duration}>
-            2018_2019
+            {schoolDuration4}
           </p>
           <p className={styles.paragraph} className={styles.details}>
-            Series of courses on Udemy platform at the moment covered basics of:
-            HTML5, CSS3, JavaScript, React js, Node.js.
+            {educationDetails4}
           </p>
         </section>
         <section className={styles.experience}>

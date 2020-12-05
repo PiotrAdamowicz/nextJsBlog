@@ -7,7 +7,7 @@ const textCV = {
     email: "adamowicz.piotr2@gmail.com",
   },
   objective:
-    "I am outgoing and energetic developer wanabe, looking for first job in IT industry.My focus of interest include front-end technologies as well as surrounding topics like design",
+    "I am outgoing and energetic developer wanabe, looking for first job in IT industry. My focus of interest include front-end technologies as well as surrounding topics like design",
   education: {
     school1: {
       school1: "VII high school, Białystok",
