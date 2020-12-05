@@ -1,48 +1,106 @@
+$margin-bottom-10: 10%;
+$margin-bottom-5: 5%;
+
+@mixin section_header__bg {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2% 3%;
+  border-radius: 10px;
+  text-align: center;
+}
+@mixin list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+}
+
 main.page_wrap {
   width: 100%;
+  max-width: 360px;
   display: grid;
   padding: 15% 10%;
   text-align: justify;
-  grid-template-columns: 100%;
+  grid-template-columns: 40% 50%;
   grid-template-rows: auto;
   grid-template-areas:
-    "pic"
-    "contact"
-    "objective"
-    "education"
-    "experience"
-    "languages"
-    "skills"
-    "links"
-    "interest";
+    "pic contact"
+    "objective objective"
+    "education education"
+    "experience experience"
+    "languages languages"
+    "skills interest"
+    "links links";
 }
-
 .contact_info {
   grid-area: contact;
   width: 100%;
+  margin-bottom: $margin-bottom-10;
   h1 {
     font-size: 30px;
   }
 }
 .objective {
   grid-area: objective;
+  text-indent: 20px;
+  margin-bottom: $margin-bottom-10;
 }
 .education {
   grid-area: education;
+  margin-bottom: $margin-bottom-10;
+  & > .section_header {
+    margin-bottom: $margin-bottom-5;
+    @include section_header__bg;
+  }
+  & > .school {
+    margin-bottom: $margin-bottom-10;
+  }
+  & > .duration {
+    margin-bottom: 2%;
+  }
 }
 .experience {
   grid-area: experience;
+  margin-bottom: $margin-bottom-10;
+  & > .section_header__bg {
+    @include section_header__bg;
+  }
 }
 .languages {
   grid-area: languages;
+  margin-bottom: $margin-bottom-10;
+  & > .section_header__bg {
+    @include section_header__bg;
+  }
 }
 .skills {
   grid-area: skills;
+  margin-bottom: $margin-bottom-10;
+  & > .section_header__bg {
+    @include section_header__bg;
+  }
+  .list {
+    @include list-container;
+  }
+  & > .list_element {
+    margin-bottom: $margin-bottom-5;
+  }
 }
-
 .links {
   grid-area: links;
+  margin-bottom: $margin-bottom-10;
+  & > .section_header__bg {
+    @include section_header__bg;
+  }
 }
 .interest {
   grid-area: interest;
+  margin-bottom: $margin-bottom-10;
+  & > .section_header__bg {
+    @include section_header__bg;
+    font-size: 19px;
+    line-height: 28px;
+  }
+  & > ul {
+    @include list-container;
+  }
 }

@@ -27,6 +27,7 @@ const Cv = () => {
     },
     interests,
   } = textCV; //detructuring text data
+
   return (
     <>
       <Meta />
@@ -99,67 +100,57 @@ const Cv = () => {
           </p>
         </section>
         <section className={styles.experience}>
-          <h3>EXPERIENCE</h3>
-
+          <h3 className={styles.section_header__bg}>EXPERIENCE</h3>
+          <h4>{jobName2}</h4>
           <p className={styles.paragraph} className={styles.duration}>
-            02.2019 – PRESENT
+            {jobDuration2}
           </p>
           <p className={styles.paragraph} className={styles.details}>
-            My main line of work is: transport of patients, medical samples, lab
-            results and supplies. I work at Geriatrics ward.
+            {jobDetails2}
           </p>
-          <h4 className={styles.school}>
-            MEDASSIST SP Z O O, Białystok – paramedic
-          </h4>
+          <h4>{jobName1}</h4>
           <p className={styles.paragraph} className={styles.duration}>
-            04.2016 – 01.2019
+            {jobDuration1}
           </p>
           <p className={styles.paragraph} className={styles.details}>
-            My main line of work was: transport of patients, medical samples,
-            lab results and supplies. I’ve worked at Children's Hospital
-            Emergency ward.
+            {jobDetails1}
           </p>
         </section>
         <section className={styles.skills}>
-          <h3>SKILLS</h3>
+          <h3 className={styles.section_header__bg}>SKILLS</h3>
           <ul className={styles.list}>
-            <li className={styles.list_elemetn}>
-              <picture>
-                <source
-                  media="(min-width: 800px)"
-                  srcSet="https://www.freepik.com/free-icon/responsive-design_752749.html"
-                />
-                <img />
-              </picture>
-              -HTML
-            </li>
-            <li className={styles.list_elemetn}>-CSS</li>
-            <li className={styles.list_elemetn}>-JavaScript</li>
-            <li className={styles.list_elemetn}>-GraphQl</li>
-            <li className={styles.list_elemetn}>-React</li>
-            <li className={styles.list_elemetn}>-Git</li>
-            <li className={styles.list_elemetn}>-RWD</li>
-            <li className={styles.list_elemetn}>-Bootstrap</li>
+            <li className={styles.list_element}>{skills[0]}</li>
+            <li className={styles.list_element}>{skills[1]}</li>
+            <li className={styles.list_element}>{skills[2]}</li>
+            <li className={styles.list_element}>{skills[3]}</li>
+            <li className={styles.list_element}>{skills[4]}</li>
+            <li className={styles.list_element}>{skills[5]}</li>
           </ul>
         </section>
         <section className={styles.languages}>
-          <h3>LANGUAGES</h3>
+          <h3 className={styles.section_header__bg}>LANGUAGES</h3>
           <p className={styles.paragraph} className={styles.detail}>
-            Communicative english in speech and writing, level B2.
+            {english}
           </p>
+          <br />
+          <p>{javaScript}</p>
         </section>
         <section className={styles.links}>
-          <h3>LINKS</h3>
+          <h3 className={styles.section_header__bg}>LINKS</h3>
           <a href={link1}>{linkName1}</a>
           <br />
           <a href={link2}>{linkName2}</a>
         </section>
         <section className={styles.interest}>
-          <h3>INTERESTS</h3>
-          <p className={styles.paragraph}>
-            In-line skating, music, reading (s-f urban fantasy), origami,
-            one-pot cooking.
-          </p>
+          <h3 className={styles.section_header__bg}>INTERESTS</h3>
+
+          <ul>
+            <li className={styles.list_element}>-{interests[0]}</li>
+            <li className={styles.list_element}>-{interests[1]}</li>
+            <li className={styles.list_element}>-{interests[2]}</li>
+            <li className={styles.list_element}>-{interests[3]}</li>
+            <li className={styles.list_element}>-{interests[4]}</li>
+          </ul>
         </section>
       </main>
     </>

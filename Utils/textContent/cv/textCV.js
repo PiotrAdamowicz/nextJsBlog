@@ -7,7 +7,7 @@ const textCV = {
     email: "adamowicz.piotr2@gmail.com",
   },
   objective:
-    "I am outgoing and energetic developer wanabe, looking for first job in IT industry. My focus of interest include front-end technologies as well as well as surrounding topics like design",
+    "I am outgoing and energetic developer wanabe, looking for first job in IT industry.My focus of interest include front-end technologies as well as surrounding topics like design",
   education: {
     school1: {
       school1: "VII high school, Białystok",
@@ -45,14 +45,15 @@ const textCV = {
   experience: {
     job1: {
       jobName1: "SP MSWIA, Białystok – paramedic",
-      jobDuration1: "2019 - 2020",
+      jobDuration1: "01.2019 - 02.2020",
       jobDetails1:
         "My main line of work was: transport of patients, medical samples, lab results and supplies. I work at Geriatrics ward.",
     },
     job2: {
       jobName2: "COMPUTARIS",
-      jobDuration2: "2020",
-      jobDetails2: "Wypełnić",
+      jobDuration2: "03.2020 - 08.2020",
+      jobDetails2:
+        "My main line of work was: monitoring, diagnosing mobile payments system and supporting second line engineers, merchants and operators.",
     },
   },
   skills: ["-HTML", "-CSS", "-JavaScript", "-React", "-Git", "-RWD"],
@@ -70,8 +71,13 @@ const textCV = {
       linkName2: "facebook.com/piotr.adamowicz.927",
     },
   },
-  interests:
-    "In-line skating, music, reading (s-f urban fantasy), origami, one-pot cooking.",
+  interests: [
+    "In-line skating",
+    "music",
+    "reading (s-f, urban fantasy)",
+    "origami",
+    "one-pot cooking",
+  ],
 };
 
 export default textCV;
