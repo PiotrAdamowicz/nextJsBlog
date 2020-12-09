@@ -107,7 +107,20 @@ const Cv = () => {
         <section className={styles.skills}>
           <h3 className={styles.section_header__bg}>SKILLS</h3>
           <ul className={styles.list}>
-            <li className={styles.list_element}>{skills[0]}</li>
+            <li className={styles.list_element}>
+              <spam className={styles.skill}>{skills[0]}</spam>
+
+              <a href="http://www.w3.org/html/logo/">
+                <img
+                  className={styles.element_logo}
+                  src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
+                  width="63"
+                  height="64"
+                  alt="HTML5 Powered"
+                  title="HTML5 Powered"
+                />
+              </a>
+            </li>
             <li className={styles.list_element}>{skills[1]}</li>
             <li className={styles.list_element}>{skills[2]}</li>
             <li className={styles.list_element}>{skills[3]}</li>
@@ -125,19 +138,21 @@ const Cv = () => {
         </section>
         <section className={styles.links}>
           <h3 className={styles.section_header__bg}>LINKS</h3>
-          <a href={link1}>{linkName1}</a>
+          <a className={styles.link} target="new tab" href={link1}>
+            {linkName1}
+          </a>
           <br />
           <a href={link2}>{linkName2}</a>
         </section>
         <section className={styles.interest}>
           <h3 className={styles.section_header__bg}>INTERESTS</h3>
 
-          <ul>
-            <li className={styles.list_element}>-{interests[0]}</li>
-            <li className={styles.list_element}>-{interests[1]}</li>
-            <li className={styles.list_element}>-{interests[2]}</li>
-            <li className={styles.list_element}>-{interests[3]}</li>
-            <li className={styles.list_element}>-{interests[4]}</li>
+          <ul className={styles.list}>
+            <li className={styles.list_element}>{interests[0]}</li>
+            <li className={styles.list_element}>{interests[1]}</li>
+            <li className={styles.list_element}>{interests[2]}</li>
+            <li className={styles.list_element}>{interests[3]}</li>
+            <li className={styles.list_element}>{interests[4]}</li>
           </ul>
         </section>
       </main>

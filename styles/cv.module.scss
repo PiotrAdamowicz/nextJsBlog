@@ -14,7 +14,7 @@ $margin-bottom-2: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 180px;
+  list-style-type: circle;
 }
 
 main.page_wrap {
@@ -132,6 +132,19 @@ main.page_wrap {
     margin-bottom: $margin-bottom-5;
     align-items: center;
     text-align: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 32px;
+    }
+  }
+  .element_logo {
+    height: 32px;
+    width: 31px;
   }
 }
 .links {
@@ -139,6 +152,12 @@ main.page_wrap {
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
     @include section_header__bg;
+    margin-bottom: $margin-bottom-5;
+  }
+  & > .link {
+    display: inline-block;
+  }
+  & > .link:nth-child(2) {
     margin-bottom: $margin-bottom-5;
   }
 }
@@ -151,7 +170,16 @@ main.page_wrap {
     font-size: 19px;
     line-height: 28px;
   }
-  & > ul {
+  & > ul.list {
     @include list-container;
+    & > .list_element {
+      margin-bottom: $margin-bottom-5;
+      align-items: center;
+      text-align: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
