@@ -56,7 +56,8 @@ const textCV = {
         "My main line of work was: monitoring, diagnosing mobile payments system and supporting second line engineers, merchants and operators.",
     },
   },
-  skills: ["HTML", "CSS", "JavaScript", "React", "Git", "RWD"],
+  skills: ["HTML", "CSS", "JavaScript", "React", "Git", "RWD", "Next.js"],
+
   languages: {
     english: "Communicative english in speech and writing, level B2.",
     javaScript: "JavaScript - so so",

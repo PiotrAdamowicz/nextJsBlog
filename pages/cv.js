@@ -1,8 +1,10 @@
-import Layout from "../components/layout";
 import Meta from "../components/meta";
 import styles from "../styles/cv.module.scss";
 import textCV from "../Utils/textContent/cv/textCV";
 import Picture from "../components/picture";
+import LiLogo from "../components/liLogo";
+// import SVG from "../Utils/SVGstrings";
+import { CSS, JS } from "../Utils/LogoSourceString";
 
 const Cv = () => {
   const {
@@ -107,25 +109,16 @@ const Cv = () => {
         <section className={styles.skills}>
           <h3 className={styles.section_header__bg}>SKILLS</h3>
           <ul className={styles.list}>
-            <li className={styles.list_element}>
-              <spam className={styles.skill}>{skills[0]}</spam>
-
-              <a href="http://www.w3.org/html/logo/">
-                <img
-                  className={styles.element_logo}
-                  src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-                  width="63"
-                  height="64"
-                  alt="HTML5 Powered"
-                  title="HTML5 Powered"
-                />
-              </a>
-            </li>
-            <li className={styles.list_element}>{skills[1]}</li>
-            <li className={styles.list_element}>{skills[2]}</li>
-            <li className={styles.list_element}>{skills[3]}</li>
-            <li className={styles.list_element}>{skills[4]}</li>
-            <li className={styles.list_element}>{skills[5]}</li>
+            <LiLogo
+              skill={textCV.skills[0]}
+              source="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
+            />
+            <LiLogo skill={textCV.skills[1]} source={CSS} />
+            <LiLogo skill={textCV.skills[2]} source={JS} />
+            <LiLogo skill={textCV.skills[3]} source={CSS} />
+            <LiLogo skill={textCV.skills[4]} source={CSS} />
+            <LiLogo skill={textCV.skills[5]} source={CSS} />
+            <LiLogo skill={textCV.skills[6]} source={CSS} />
           </ul>
         </section>
         <section className={styles.languages}>
@@ -156,6 +149,9 @@ const Cv = () => {
           </ul>
         </section>
       </main>
+      <footer>
+        <a href="https://icons8.com/icon/21278/css3">CSS3 icon by Icons8</a>
+      </footer>
     </>
   );
 };
