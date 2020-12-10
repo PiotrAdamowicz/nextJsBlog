@@ -129,22 +129,30 @@ main.page_wrap {
     @include list-container;
   }
   .list_element {
+    width: 60%;
     margin-bottom: $margin-bottom-5;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+
     &:last-child {
       margin-bottom: 0;
     }
 
     .skill {
-      display: inline-block;
       vertical-align: middle;
       line-height: 32px;
+      align-items: left;
     }
-  }
-  .element_logo {
-    height: 32px;
-    width: 31px;
+    .element_logo {
+      display: block;
+
+      text-align: right;
+    }
   }
 }
 .links {
@@ -182,4 +190,10 @@ main.page_wrap {
       }
     }
   }
+}
+.footer {
+  font-size: 0.5rem;
+  color: rgb(200, 201, 204);
+  padding: 2%;
+  text-align: right;
 }

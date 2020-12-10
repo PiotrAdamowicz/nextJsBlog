@@ -3,8 +3,13 @@ import styles from "../styles/cv.module.scss";
 import textCV from "../Utils/textContent/cv/textCV";
 import Picture from "../components/picture";
 import LiLogo from "../components/liLogo";
-// import SVG from "../Utils/SVGstrings";
-import { CSS, JS } from "../Utils/LogoSourceString";
+import GIT from "../img/icons/Git-Icon-1788C.png";
+import NEXT from "../img/icons/nextjs.svg";
+import RWD from "../img/icons/tablet-phone-and-browser.png";
+import HTML from "../img/icons/html.png";
+import CSS from "../img/icons/css-3.png";
+import JS from "../img/icons/javascript-48.png";
+import RC from "../img/icons/react-40.png";
 
 const Cv = () => {
   const {
@@ -15,7 +20,6 @@ const Cv = () => {
       school2: { school2, schoolDuration2, educationDetails2 },
       school3: { school3, schoolDuration3, educationDetails3 },
       school4: { school4, schoolDuration4, educationDetails4 },
-      school5: { school5, schoolDuration5, educationDetails5 },
     },
     experience: {
       job1: { jobName1, jobDuration1, jobDetails1 },
@@ -109,16 +113,13 @@ const Cv = () => {
         <section className={styles.skills}>
           <h3 className={styles.section_header__bg}>SKILLS</h3>
           <ul className={styles.list}>
-            <LiLogo
-              skill={textCV.skills[0]}
-              source="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
-            />
-            <LiLogo skill={textCV.skills[1]} source={CSS} />
-            <LiLogo skill={textCV.skills[2]} source={JS} />
-            <LiLogo skill={textCV.skills[3]} source={CSS} />
-            <LiLogo skill={textCV.skills[4]} source={CSS} />
-            <LiLogo skill={textCV.skills[5]} source={CSS} />
-            <LiLogo skill={textCV.skills[6]} source={CSS} />
+            <LiLogo skill={skills[0]} source={HTML} />
+            <LiLogo skill={skills[1]} source={CSS} />
+            <LiLogo skill={skills[2]} source={JS} size={[31 * 1.3, 32 * 1.3]} />
+            <LiLogo skill={skills[3]} source={RC} />
+            <LiLogo skill={skills[4]} source={GIT} />
+            <LiLogo skill={skills[5]} source={RWD} />
+            <LiLogo skill={skills[6]} source={NEXT} size={[62, 42]} />
           </ul>
         </section>
         <section className={styles.languages}>
@@ -149,8 +150,28 @@ const Cv = () => {
           </ul>
         </section>
       </main>
-      <footer>
-        <a href="https://icons8.com/icon/21278/css3">CSS3 icon by Icons8</a>
+      <footer className={styles.footer}>
+        <div>
+          Icons made by{" "}
+          <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+            Freepik
+          </a>{" "}
+          <span>and</span>{" "}
+          <a
+            href="https://www.flaticon.com/authors/pixel-perfect"
+            title="Pixel perfect"
+          >
+            Pixel perfect
+          </a>{" "}
+        </div>
+        <div>
+          from{" "}
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com
+          </a>
+          <br />
+          <a href="https://icons8.com/icons">Icons by Icons8</a>
+        </div>
       </footer>
     </>
   );
