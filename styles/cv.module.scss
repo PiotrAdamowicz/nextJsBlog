@@ -1,8 +1,4 @@
-$margin-bottom-12: 12%;
-$margin-bottom-10: 10%;
-$margin-bottom-8: 8%;
-$margin-bottom-5: 5%;
-$margin-bottom-2: 2%;
+@import "./variables.scss";
 
 @mixin section_header__bg {
   background-color: rgba(0, 0, 0, 0.6);
@@ -19,7 +15,6 @@ $margin-bottom-2: 2%;
 
 main.page_wrap {
   width: 100%;
-  max-width: 360px;
   display: grid;
   padding: 10% 10%;
   text-align: justify;
@@ -39,29 +34,50 @@ main.page_wrap {
     margin-bottom: $margin-bottom-10;
     @include section_header__bg;
   }
-
+  p {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
   & > section > h4,
   p {
     margin-bottom: $margin-bottom-2;
+  }
+
+  a {
+    margin-right: 5%;
+    margin-left: 5%;
   }
   .details {
     margin-bottom: $margin-bottom-10;
   }
 }
+
 .contact_info {
   grid-area: contact;
   width: 100%;
   margin-bottom: $margin-bottom-8;
-  h1 {
+  h1.fn {
     font-size: 30px;
   }
   h2 {
     font-size: 20px;
     margin-bottom: 2%;
   }
+
   p {
     text-indent: 0;
     font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .email {
+    display: inline-block;
+  }
+  .tel {
+    display: inline-block;
+  }
+  & > div {
+    display: inline-block;
   }
 }
 .objective {
@@ -196,4 +212,32 @@ main.page_wrap {
   color: rgb(200, 201, 204);
   padding: 2%;
   text-align: right;
+}
+@media (min-width: 615px) and (orientation: landscape) {
+  main.page_wrap {
+    grid-template-areas:
+      "contact pic"
+      "objective pic"
+      "education education"
+      "experience experience"
+      "languages languages"
+      "skills skills"
+      "interest interest"
+      "links links";
+    p {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    .duration {
+      margin-left: 2%;
+    }
+  }
+  .contact_info {
+    p {
+      margin-left: auto;
+    }
+  }
 }

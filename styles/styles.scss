@@ -1,3 +1,6 @@
+// @import "./variables.scss";
+// @import "./cv.module.scss";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,10 +15,10 @@ body {
   font-family: "Montserrat", sans-serif;
   font-family: "Roboto", sans-serif;
   height: 100%;
-  width: 360px;
   background-color: #30363d;
   margin: auto;
 }
+
 #__next {
   // display: grid;
   // grid-template-rows: auto 1fr auto;
@@ -34,7 +37,7 @@ h1 {
 }
 h2 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   font-family: "Zilla Slab";
   color: rgba(255, 255, 255, 0.75);
 }

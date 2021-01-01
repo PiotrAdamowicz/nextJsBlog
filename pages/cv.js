@@ -44,17 +44,16 @@ const Cv = () => {
           <h2 className={styles.position}>{position}</h2>
 
           <p className={styles.paragraph}>
-            Cell:{" "}
-            <span className={styles.phone_email} className={styles.tel}>
+            <div>Cell: </div>
+            <div className={styles.phone_email} className={styles.tel}>
               {phone}
-            </span>
-            <br />
-            <span className={styles.phone_email}>
-              Email:{" "}
-              <a className={styles.email} href="adamowicz.piotr2@gmail.com">
-                {email}
-              </a>
-            </span>
+            </div>
+          </p>
+          <p className={styles.paragraph}>
+            <div className={styles.email}>Email: </div>
+            <a className={styles.email} href="adamowicz.piotr2@gmail.com">
+              {email}
+            </a>
           </p>
         </div>
 

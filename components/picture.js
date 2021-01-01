@@ -7,7 +7,7 @@ const Picture = () => {
     <picture className={styles.pic_container}>
       <source
         className={styles.pic}
-        media="(min-width: 650px)"
+        media="(min-width: 500px)"
         srcSet={imageMedium}
       />
       <img className={styles.pic} src={imageSmall} alt="Piotr Adamowicz" />
