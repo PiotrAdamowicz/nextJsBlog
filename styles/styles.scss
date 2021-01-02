@@ -1,14 +1,9 @@
-// @import "./variables.scss";
-// @import "./cv.module.scss";
+@import "./variables.scss";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-:root {
-  font-size: 14;
 }
 
 body {
@@ -17,11 +12,10 @@ body {
   height: 100%;
   background-color: #30363d;
   margin: auto;
+  font-size: 14px;
 }
 
 #__next {
-  // display: grid;
-  // grid-template-rows: auto 1fr auto;
   height: inherit;
   width: 100%;
 }
@@ -31,7 +25,7 @@ a {
   color: whitesmoke;
 }
 h1 {
-  font-size: 44px;
+  font-size: 3rem;
   font-family: "Zilla Slab", sans-serif;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -42,21 +36,21 @@ h2 {
   color: rgba(255, 255, 255, 0.75);
 }
 h3 {
-  font-size: 24px;
+  font-size: 1.7rem;
   font-family: "Zilla Slab";
   color: rgba(255, 255, 255, 0.95);
 }
 h4 {
-  font-size: 19px;
+  font-size: 1.3rem;
   font-family: "Montserrat";
-  color: #cbcfd4;
+  color: $tx-s;
 }
 
 p,
 li {
-  font-size: 1rem;
+  font-size: $tx-size01-0;
   font-family: "Montserrat";
-  color: #cbcfd4;
+  color: rgb(203, 207, 212);
 }
 ul {
   list-style: none;

@@ -17,13 +17,14 @@ const Contact = () => {
         method="post"
       >
         <fieldset className={styles.fieledset} id="fs-frm-inputs">
-          <legend>
-            If you want to contact me just fill up the form belowe:
+          <legend className={styles.legend}>
+            If you want to contact me just fill up the form below and Submit:
           </legend>
           <label className={styles.label} htmlFor="full-name">
             Full Name
           </label>
           <input
+            className={styles.input}
             ref={register}
             type="text"
             name="name"
@@ -35,6 +36,7 @@ const Contact = () => {
             Email Address
           </label>
           <input
+            className={styles.input}
             ref={register}
             type="email"
             name="_replyto"
@@ -46,6 +48,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
+            className={styles.message}
             ref={register}
             rows="5"
             name="message"
@@ -54,6 +57,7 @@ const Contact = () => {
             required=""
           ></textarea>
           <input
+            className={styles.input}
             type="hidden"
             name="_subject"
             id="email-subject"
@@ -61,7 +65,7 @@ const Contact = () => {
           />
         </fieldset>
         <input
-          className={`submitBtn ${styles.submitBtn}`}
+          className={`submitBtn ${styles.submitBtn} ${styles.input}`}
           type="submit"
           value="Submit"
         />

@@ -1,13 +1,26 @@
+//Margin & Padding
 $margin-bottom-12: 12%;
 $margin-bottom-10: 10%;
 $margin-bottom-8: 8%;
 $margin-bottom-5: 5%;
+$margin-bottom-3: 3%;
 $margin-bottom-2: 2%;
+$form-1: 1%;
+$form-2: 2%;
+
+//Font-size
+$tx-size01-0: 1rem;
+$tx-size00-5: 0.5rem;
+$tx-size00-7: 0.7rem;
+
+//Border
+$brd-r-00-7: 0.7rem;
 
 //Color Pallet
 $tx-s: rgb(200, 201, 204);
-$tx-m: #435058;
+$tx-m: rgb(67, 80, 88);
 $tx-l: rgba(121, 138, 141, 1);
+$tx-bg: rgba(245, 245, 245, 0.95);
 $bg: rgba(8, 15, 29, 1);
 $bg-op4rgba: (8, 15, 29, 0.4);
 $bg-op7rgba: (8, 15, 29, 0.7);
