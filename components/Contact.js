@@ -1,9 +1,11 @@
-import { useForm } from "react-hook-form";
+import { useForm } from "@formspree/react";
 import styles from "../styles/contact-form.module.scss";
 
 const Contact = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data, e) => console.log(data, e);
+  const [state, handleSubmit] = useForm("{your-form-id}");
+  if (state.succeeded) {
+    return <div>Thank you for signing up!</div>;
+  }
 
   return (
     <>
@@ -13,10 +15,10 @@ const Contact = () => {
         id="fs-frm"
         name="simple-contact-htmlForm"
         acceptCharset="utf-8"
-        action="https://htmlFormspree.io/xwkrynje" // comentu/uncoment to hook up mailing service
+        action="https://htmlFormspree.io/xwkrynje" // comment/uncomment to hook up mailing service
         method="post"
       >
-        <fieldset className={styles.fieledset} id="fs-frm-inputs">
+        <fieldset className={styles.fieldset} id="fs-frm-inputs">
           <legend className={styles.legend}>
             If you want to contact me just fill up the form below and Submit:
           </legend>
@@ -68,6 +70,7 @@ const Contact = () => {
           className={`submitBtn ${styles.submitBtn} ${styles.input}`}
           type="submit"
           value="Submit"
+          disabled={state.submitting}
         />
       </form>
       <style jsx>{``}</style>

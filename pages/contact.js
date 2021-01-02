@@ -1,9 +1,9 @@
-import Contact from "../components/Contact";
+import ContactForm from "../components/ContactFrom";
 
 const contact = () => {
   return (
     <>
-      <Contact></Contact>
+      <ContactForm></ContactForm>
       <style jsx>{``}</style>
     </>
   );

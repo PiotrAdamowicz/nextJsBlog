@@ -4,50 +4,59 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .fieledset {
+  .fieldset {
     display: flex;
     flex-direction: column;
     border: none;
     margin: 10%;
     .legend {
-      padding: 0 $margin-bottom-2 $margin-bottom-5 $margin-bottom-2;
-      padding-bottom: $margin-bottom-5;
+      padding: $margin-bottom-5 $margin-bottom-3 $margin-bottom-8
+        $margin-bottom-3;
+
       color: $tx-l;
       text-align: justify;
       font-family: "Montserrat", sans-serif;
+      font-size: $tx-size01-5;
     }
     .label {
       color: $tx-m;
       padding-left: $margin-bottom-5;
-      padding-bottom: $margin-bottom-5;
+      padding-bottom: $margin-bottom-10;
+      font-size: $tx-size01-5;
     }
     .input {
-      margin-bottom: $margin-bottom-3;
+      margin-bottom: $margin-bottom-8;
       padding: $form-2;
       background-color: $tx-bg;
       border: none;
       border-radius: $brd-r-00-7;
       color: $tx-l;
-      font-size: $tx-size00-7;
+      line-height: $tx-size01-5;
+      font-size: $tx-size01-0;
     }
     .message {
       padding: $form-2;
       background-color: $tx-bg;
       font-family: "Roboto", sans-serif;
-      font-size: $tx-size00-7;
+      line-height: $tx-size01-5;
+      font-size: $tx-size01-0;
       color: $tx-l;
       border: none;
       border-radius: $brd-r-00-7;
     }
   }
   .submitBtn {
-    background-color: transparent;
-    margin: $margin-bottom-2 $margin-bottom-12;
-    padding: $margin-bottom-3 $margin-bottom-2;
+    margin: $margin-bottom-15 0;
+    padding: $margin-bottom-5 $margin-bottom-2;
     background-color: $bg;
     color: $tx-m;
-    font-size: $tx-size01-0;
+    font-size: $tx-size01-5;
     border: none;
-    border-radius: 10px;
+    border-radius: $brd-r-00-7;
+    cursor: pointer;
+    transition: linear 0.3s;
+    &:hover {
+      background-color: $bg-op7;
+    }
   }
 }
