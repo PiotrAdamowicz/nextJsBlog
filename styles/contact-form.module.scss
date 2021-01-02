@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .fieledset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 10%;
+  }
+  .submitBtn {
+    background-color: transparent;
+    margin: 2% 8%;
+    padding: 0.3rem 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .label {
+    color: $tx-l;
+  }
+}

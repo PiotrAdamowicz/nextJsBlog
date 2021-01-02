@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import colors from "../Utils/colors";
+import styles from "../styles/contact-form.module.scss";
 
 const Contact = () => {
   const { register, handleSubmit } = useForm();
@@ -8,6 +8,7 @@ const Contact = () => {
   return (
     <>
       <form
+        className={styles.contact_form}
         onSubmit={handleSubmit(onSubmit)}
         id="fs-frm"
         name="simple-contact-htmlForm"
@@ -15,11 +16,13 @@ const Contact = () => {
         action="https://htmlFormspree.io/xwkrynje" // comentu/uncoment to hook up mailing service
         method="post"
       >
-        <fieldset id="fs-frm-inputs">
+        <fieldset className={styles.fieledset} id="fs-frm-inputs">
           <legend>
             If you want to contact me just fill up the form belowe:
           </legend>
-          <label htmlFor="full-name">Full Name</label>
+          <label className={styles.label} htmlFor="full-name">
+            Full Name
+          </label>
           <input
             ref={register}
             type="text"
@@ -28,7 +31,9 @@ const Contact = () => {
             placeholder="First and Last"
             required=""
           />
-          <label htmlFor="email-address">Email Address</label>
+          <label className={styles.label} htmlFor="email-address">
+            Email Address
+          </label>
           <input
             ref={register}
             type="email"
@@ -37,7 +42,9 @@ const Contact = () => {
             placeholder="your@email.com"
             required=""
           />
-          <label htmlFor="message">Message</label>
+          <label className={styles.label} htmlFor="message">
+            Message
+          </label>
           <textarea
             ref={register}
             rows="5"
@@ -53,7 +60,11 @@ const Contact = () => {
             value="Contact htmlForm Submission"
           />
         </fieldset>
-        <input className="submitBtn" type="submit" value="Submit" />
+        <input
+          className={`submitBtn ${styles.submitBtn}`}
+          type="submit"
+          value="Submit"
+        />
       </form>
       <style jsx>{``}</style>
     </>
