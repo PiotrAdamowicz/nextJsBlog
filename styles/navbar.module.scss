@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+.navbar {
+  display: flex;
+  background-color: $bg-op3;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom-left-radius: $brd-r-00-2;
+  border-bottom-right-radius: $brd-r-00-2;
+  .link {
+    display: block;
+    line-height: 3.5em;
+    color: $tx-s;
+  }
+}

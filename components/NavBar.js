@@ -1,39 +1,27 @@
 import Link from "next/link";
-import colors from "../Utils/colors";
+import styles from "../styles/navbar.module.scss";
 
 const NavBar = () => {
   return (
     <>
-      <nav>
+      <nav className={styles.navbar}>
         <Link href="/">
-          <a>Home</a>
+          <a className={styles.link}>Home</a>
         </Link>
         <Link href="/about">
-          <a>About</a>
+          <a className={styles.link}>About</a>
         </Link>
         <Link href="/portfolio">
-          <a>Portfolio</a>
+          <a className={styles.link}>Portfolio</a>
         </Link>
         <Link href="/cv">
-          <a>Resume</a>
+          <a className={styles.link}>Resume</a>
         </Link>
         <Link href="/contact">
-          <a>Contact</a>
+          <a className={styles.link}>Contact</a>
         </Link>
       </nav>
-      <style jsx>{`
-        nav {
-          display: flex;
-          background-color: ${colors.main_op2};
-          justify-content: space-around;
-          width: 100%;
-        }
-        a {
-          display: block;
-          line-height: 3.5em;
-          color: ${colors.font.fn.navStandard};
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </>
   );
 };

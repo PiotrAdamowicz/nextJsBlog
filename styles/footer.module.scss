@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+.footer {
+  display: flex;
+  background-color: $bg-op7;
+  justify-content: space-around;
+  width: 100%;
+  a,
+  p {
+    display: block;
+    font-size: 1em;
+    line-height: 3.5em;
+    color: $tx-s;
+  }
+}

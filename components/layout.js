@@ -1,9 +1,8 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Meta from "./meta";
-import colors from "../Utils/colors";
 
-//The parent tag is __next acessible in meta.js component
+//The parent tag is __next accessible in meta.js component
 
 const Layout = (props) => {
   return (
@@ -13,11 +12,7 @@ const Layout = (props) => {
       <main>{props.children}</main>
       <Footer></Footer>
 
-      <style jsx>{`
-        main {
-          color: ${colors.font.tx.fontLarge};
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </>
   );
 };

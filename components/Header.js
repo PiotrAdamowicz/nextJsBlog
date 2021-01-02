@@ -1,5 +1,4 @@
 import NavBar from "./NavBar";
-import color from "../Utils/colors";
 
 const Header = () => {
   return (

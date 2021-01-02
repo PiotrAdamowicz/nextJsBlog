@@ -1,5 +1,4 @@
 import Head from "next/head";
-import color from "../Utils/colors";
 
 const Meta = () => (
   <>

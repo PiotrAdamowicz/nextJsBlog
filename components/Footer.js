@@ -1,10 +1,10 @@
 import Link from "next/link";
-import colors from "../Utils/colors";
+import styles from "../styles/footer.module.scss";
 
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className={styles.footer}>
         <p>Made by Piotr Adamowicz from Next.js docs</p>
         <div>
           <Link href="/contact">
@@ -12,21 +12,7 @@ const Footer = () => {
           </Link>
         </div>
       </footer>
-      <style jsx>{`
-        footer {
-          display: flex;
-          background-color: ${colors.main_op2};
-          justify-content: space-around;
-          width: 100%;
-        }
-        a,
-        p {
-          display: block;
-          font-size: 1em;
-          line-height: 3.5em;
-          color: ${colors.font.fn.navStandard};
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </>
   );
 };
