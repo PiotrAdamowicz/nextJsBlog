@@ -12,7 +12,7 @@ const Contact = () => {
         id="fs-frm"
         name="simple-contact-htmlForm"
         acceptCharset="utf-8"
-        // action="https://htmlFormspree.io/xwkrynje" // comentu/uncoment to hook up mailing service
+        action="https://htmlFormspree.io/xwkrynje" // comentu/uncoment to hook up mailing service
         method="post"
       >
         <fieldset id="fs-frm-inputs">
