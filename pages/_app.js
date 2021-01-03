@@ -3,7 +3,7 @@ import { FormspreeProvider } from "@formspree/react";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <FormspreeProvider project="{your-project-id}">
+    <FormspreeProvider project="xwkrynje">
       <Component {...pageProps} />
     </FormspreeProvider>
   );
