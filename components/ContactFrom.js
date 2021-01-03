@@ -2,10 +2,11 @@ import styles from "../styles/contact-form.module.scss";
 import { useForm, ValidationError } from "@formspree/react";
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("https://formspree.io/f/xwkrynje");
+  const [state, handleSubmit] = useForm("xwkrynje");
   if (state.succeeded) {
     return <p>Thanks for the message!</p>;
   }
+  console.log(state.errors);
   return (
     <form
       onSubmit={handleSubmit}
