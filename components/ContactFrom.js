@@ -20,6 +20,7 @@ function ContactForm() {
           console.log(error.text);
         }
       );
+    //TODO: hide IDs in .env
   }
 
   return (
