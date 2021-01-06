@@ -1,58 +1,73 @@
 import styles from "../styles/contact-form.module.scss";
-import { useForm, ValidationError } from "@formspree/react";
+import emailjs, { init } from "emailjs-com";
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("xwkrynje");
-  if (state.succeeded) {
-    return <p>Thanks for the message!</p>;
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_0pah77j",
+        "template_z7s32ym",
+        e.target,
+        "user_YSKQRUHJ4CvGKJhToQaSR"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
-  console.log(state.errors);
+
   return (
     <form
-      onSubmit={handleSubmit}
       className={styles.contact_form}
       acceptCharset="utf-8"
       method="post"
+      onSubmit={sendEmail}
     >
       <fieldset className={styles.fieldset}>
         <legend className={styles.legend}>
           If you want to contact me just fill up the form below and Submit:
         </legend>
-        <label htmlFor="email" className={styles.label} htmlFor="email-address">
-          Email Address
+        <label htmlFor="from_name" className={styles.label}>
+          Name:
         </label>
         <input
-          id="email"
+          type="text"
+          name="from_name"
+          className={styles.input}
+          placeholder="your name"
+        />
+        <label htmlFor="user_email" className={styles.label}>
+          Email:
+        </label>
+        <input
           type="email"
-          name="email"
+          name="user_email"
           className={styles.input}
           placeholder="your@email.com"
           required
         />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <label className={styles.label} htmlFor="message">
-          Message
+        <label htmlFor="user_email" className={styles.label}>
+          Message:
         </label>
         <textarea
-          id="message"
           name="message"
           className={styles.message}
           placeholder="Type your message..."
           rows="7"
           required
         />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
-        <button
+        <input
+          type="submit"
+          value="Send"
           type="submit"
           className={`submitBtn ${styles.submitBtn} `}
-          disabled={state.submitting}
-        >
-          Submit
-        </button>
+        />
       </fieldset>
     </form>
   );
