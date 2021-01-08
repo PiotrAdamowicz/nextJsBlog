@@ -1,3 +1,3 @@
 # CONTACT FORM
 
-Contact from is powered by [Formspree](https://formspree.io/forms/xwkrynje/integration)
+Contact from is powered by https://dashboard.emailjs.com

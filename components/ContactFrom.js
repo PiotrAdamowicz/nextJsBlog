@@ -1,7 +1,12 @@
 import styles from "../styles/contact-form.module.scss";
-import emailjs, { init } from "emailjs-com";
+import emailjs from "emailjs-com";
+import { useForm, handleSubmit } from "react-hook-form";
 
 function ContactForm() {
+  const { register, errors, handleSubmit } = useForm({ mode: "onChange" });
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+  };
   function sendEmail(e) {
     e.preventDefault();
 
@@ -28,7 +33,7 @@ function ContactForm() {
       className={styles.contact_form}
       acceptCharset="utf-8"
       method="post"
-      onSubmit={sendEmail}
+      // onSubmit={sendEmail}
     >
       <fieldset className={styles.fieldset}>
         <legend className={styles.legend}>
@@ -42,6 +47,7 @@ function ContactForm() {
           name="from_name"
           className={styles.input}
           placeholder="your name"
+          ref={register({ minLenght: 3, maxLenght: 25 })}
         />
         <label htmlFor="user_email" className={styles.label}>
           Email:
@@ -51,7 +57,7 @@ function ContactForm() {
           name="user_email"
           className={styles.input}
           placeholder="your@email.com"
-          required
+          ref={register}
         />
         <label htmlFor="user_email" className={styles.label}>
           Message:
@@ -61,7 +67,7 @@ function ContactForm() {
           className={styles.message}
           placeholder="Type your message..."
           rows="7"
-          required
+          ref={register}
         />
         <input
           type="submit"
