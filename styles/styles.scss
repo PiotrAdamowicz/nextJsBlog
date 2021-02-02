@@ -12,30 +12,37 @@ body {
   height: 100%;
   background-color: #30363d;
   margin: auto;
-  font-size: 14px;
+  font-size: 100%;
 }
+
 main {
   color: $tx-l;
 }
 
 #__next {
-  height: inherit;
+  height: 100vh;
   width: 100%;
 }
 a {
   text-decoration: none;
   cursor: pointer;
   color: whitesmoke;
+  text-align: center;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: 0.2rem;
+  font-family: "Montserrat";
 }
 h1 {
   font-size: 3rem;
-  font-family: "Zilla Slab", sans-serif;
+
   color: rgba(255, 255, 255, 0.9);
 }
 h2 {
   font-weight: 700;
   font-size: 2rem;
-  font-family: "Zilla Slab";
   color: rgba(255, 255, 255, 0.75);
 }
 h3 {
@@ -45,7 +52,6 @@ h3 {
 }
 h4 {
   font-size: 1.3rem;
-  font-family: "Montserrat";
   color: $tx-s;
 }
 
@@ -57,4 +63,9 @@ li {
 }
 ul {
   list-style: none;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 26px;
+  }
 }

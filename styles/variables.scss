@@ -33,3 +33,10 @@ $bg-op4: rgba(8, 15, 29, 0.4);
 $bg-op7: rgba(8, 15, 29, 0.7);
 $bg-op8: rgba(8, 15, 29, 0.85);
 $bg-light: rgba(45, 58, 68, 1);
+$bgh-op6: rgba(0, 0, 0, 0.6);
+
+@mixin list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

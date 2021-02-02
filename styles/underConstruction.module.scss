@@ -1,0 +1,13 @@
+.underConstruction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  & > .flexItem {
+    align-self: center;
+  }
+  & > img {
+    object-fit: contain;
+    height: 100%;
+  }
+}

@@ -1,18 +1,5 @@
 @import "./variables.scss";
 
-@mixin section_header__bg {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2% 3%;
-  border-radius: 10px;
-  text-align: center;
-}
-@mixin list-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  // list-style-type: none;
-}
-
 main.page_wrap {
   width: 100%;
   display: grid;
@@ -32,7 +19,10 @@ main.page_wrap {
     "links links";
   .section_header {
     margin-bottom: $margin-bottom-10;
-    @include section_header__bg;
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
   }
   p {
     margin-right: 5%;
@@ -89,7 +79,10 @@ main.page_wrap {
   margin-bottom: $margin-bottom-10;
   & > .section_header {
     margin-bottom: $margin-bottom-10;
-    @include section_header__bg;
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
   }
   & > .school {
     margin-bottom: $margin-bottom-2;
@@ -109,7 +102,11 @@ main.page_wrap {
   grid-area: experience;
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
-    @include section_header__bg;
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
+
     margin-bottom: $margin-bottom-5;
   }
   & > .duration {
@@ -127,7 +124,11 @@ main.page_wrap {
   grid-area: languages;
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
-    @include section_header__bg;
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
+
     margin-bottom: $margin-bottom-5;
   }
   & > p {
@@ -138,7 +139,11 @@ main.page_wrap {
   grid-area: skills;
   margin-bottom: $margin-bottom-10;
   .section_header__bg {
-    @include section_header__bg;
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
+
     margin-bottom: $margin-bottom-5;
   }
   .list {
@@ -161,22 +166,30 @@ main.page_wrap {
 
     .skill {
       vertical-align: middle;
-      line-height: 32px;
       align-items: left;
     }
     .element_logo {
       display: block;
-
+      margin-left: $margin-bottom-10;
       text-align: right;
     }
   }
 }
 .links {
   grid-area: links;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
-    @include section_header__bg;
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
+
     margin-bottom: $margin-bottom-5;
+    letter-spacing: 0.4rem;
   }
   & > .link {
     display: inline-block;
@@ -189,13 +202,17 @@ main.page_wrap {
   grid-area: interest;
   margin-bottom: $margin-bottom-10;
   & > .section_header__bg {
-    @include section_header__bg;
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
+
     margin-bottom: $margin-bottom-5;
-    font-size: 19px;
-    line-height: 28px;
+    letter-spacing: 0.2rem;
   }
   & > ul.list {
     @include list-container;
+    height: 80%;
     & > .list_element {
       margin-bottom: $margin-bottom-5;
       align-items: center;
@@ -213,7 +230,7 @@ main.page_wrap {
   padding: 2%;
   text-align: right;
 }
-@media (min-width: 615px) and (orientation: landscape) {
+@media (min-width: 615px) {
   main.page_wrap {
     grid-template-areas:
       "contact pic"
@@ -238,6 +255,34 @@ main.page_wrap {
   .contact_info {
     p {
       margin-left: auto;
+    }
+  }
+}
+@media (min-width: 768px) {
+  main.page_wrap {
+    grid-template-areas:
+      "contact pic"
+      "objective pic"
+      "education education"
+      "experience experience"
+      "languages languages"
+      "skills interest"
+      "links links";
+  }
+  .interest {
+    & > .section_header__bg {
+      // border-radius: 30px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  .skills {
+    .section_header__bg {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .list_element {
+      margin-left: $margin-bottom-15;
     }
   }
 }

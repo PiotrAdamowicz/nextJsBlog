@@ -3,12 +3,14 @@
 .footer {
   display: flex;
   background-color: $bg-op7;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: 10%;
+  padding: 0 5%;
   width: 100%;
   a,
   p {
     display: block;
-    font-size: 1em;
+    font-size: 0.5em;
     line-height: 3.5em;
     color: $tx-s;
   }

@@ -1,11 +1,10 @@
 import Layout from "../components/layout";
-import poohImg from "../img/pooh.jpg";
+import UnderConstruction from "../components/underConstruction";
 
 const Index = () => (
   <>
     <Layout>
-      <h1>Hello Jacob</h1>
-      <img src={poohImg}></img>
+      <UnderConstruction />
     </Layout>
   </>
 );

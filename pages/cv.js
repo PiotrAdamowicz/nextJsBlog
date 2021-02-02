@@ -3,13 +3,7 @@ import styles from "../styles/cv.module.scss";
 import textCV from "../Utils/textContent/cv/textCV";
 import Picture from "../components/picture";
 import LiLogo from "../components/liLogo";
-import GIT from "../img/icons/Git-Icon-1788C.png";
-import NEXT from "../img/icons/nextjs.svg";
-import RWD from "../img/icons/tablet-phone-and-browser.png";
-import HTML from "../img/icons/html.png";
-import CSS from "../img/icons/css-3.png";
-import JS from "../img/icons/javascript-48.png";
-import RC from "../img/icons/react-40.png";
+import { GIT, NEXT, RWD, HTML, CSS, JS, RC } from "../Utils/scripts/imports";
 
 const Cv = () => {
   const {

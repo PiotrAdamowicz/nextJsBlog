@@ -11,8 +11,14 @@ const Layout = (props) => {
       <Header></Header>
       <main>{props.children}</main>
       <Footer></Footer>
-
-      <style jsx>{``}</style>
+      <style jsx>{`
+        main {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          min-height: 80%;
+        }
+      `}</style>
     </>
   );
 };
