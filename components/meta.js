@@ -58,8 +58,13 @@ const Meta = () => {
           font-size: 18px;
         }
         #__next {
-          width: ${size.width}px;
+          min-width: ${size.width}px;
           min-height: ${size.height}px;
+        }
+        @media (orientation: landscape) and (min-width: 1024px) {
+          #__next {
+            min-width: ${size.width - 20}px;
+          }
         }
       `}</style>
     </>
