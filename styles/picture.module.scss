@@ -38,3 +38,14 @@
     height: 253px;
   }
 }
+// @media (min-width: 767px) {
+//   .pic_container,
+//   .pic_container::after {
+//     & > img {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate();
+//     }
+//   }
+// }

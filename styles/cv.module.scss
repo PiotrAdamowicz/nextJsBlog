@@ -47,10 +47,10 @@ main.page_wrap {
   width: 100%;
   margin-bottom: $margin-bottom-8;
   h1.fn {
-    font-size: 30px;
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 20px;
+    font-size: 1.8rem;
     margin-bottom: 2%;
   }
 
@@ -262,12 +262,16 @@ main.page_wrap {
   main.page_wrap {
     grid-template-areas:
       "contact pic"
-      "objective pic"
+      "objective objective"
       "education education"
       "experience experience"
       "languages languages"
       "skills interest"
       "links links";
+    font-size: 1rem;
+  }
+  .objective {
+    margin-top: $margin-bottom-2;
   }
   .interest {
     & > .section_header__bg {

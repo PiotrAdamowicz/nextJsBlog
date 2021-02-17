@@ -1,7 +1,7 @@
 const textCV = {
   contactInfo: {
     name: "Piotr Adamowicz",
-    position: "Junior Front-end Developer",
+    position: "Junior Front End Developer",
     address: "Zagórna 33/20 15-820 Białystok",
     phone: "506-586-928",
     email: "adamowicz.piotr2@gmail.com",
@@ -60,7 +60,7 @@ const textCV = {
 
   languages: {
     english: "Communicative english in speech and writing, level B2.",
-    javaScript: "JavaScript - so so",
+    javaScript: "JavaScript",
   },
   links: {
     link1: {
