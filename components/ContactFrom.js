@@ -1,21 +1,24 @@
 import { useState } from "react";
 import styles from "../styles/contact-form.module.scss";
 import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
 
 function ContactForm() {
+  //emailjs setup
   const [name, setName] = useState("your name");
   const [email, setEmail] = useState("your@email.com");
   const [message, setMessage] = useState("Type your message...");
-
-  const handleValidation = () => {
-    const state = [name, email, message];
-    console.log(state);
+  //react-hook steup
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data, e) => {
+    sendEmail(e);
+    console.log(data, e);
   };
+  const onError = (errors, e) => console.log(errors, e);
 
   const handleChange = (e) => {
-    console.log(e.target.name);
     switch (e.target.name) {
-      case "from_name":
+      case "form_name":
         setName({ name: e.target.value });
         break;
       case "user_email":
@@ -28,14 +31,13 @@ function ContactForm() {
   };
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    handleValidation();
+    // e.preventDefault();
 
     //emailer hook up
     emailjs
       .sendForm(
-        // "service_0pah77j",
-        // "template_z7s32ym",
+        "service_0pah77j",
+        "template_z7s32ym",
         e.target
         // "user_YSKQRUHJ4CvGKJhToQaSR"
       )
@@ -55,19 +57,19 @@ function ContactForm() {
       className={styles.contact_form}
       acceptCharset="utf-8"
       method="post"
-      onSubmit={sendEmail}
+      onSubmit={handleSubmit(onSubmit, onError)}
     >
       <fieldset className={styles.fieldset}>
         <legend className={styles.legend}>
           If you want to contact me just fill up the form below and Submit:
         </legend>
-        <label htmlFor="from_name" className={styles.label}>
+        <label htmlFor="form_name" className={styles.label}>
           Name:
         </label>
         <input
           onChange={handleChange}
           type="text"
-          name="from_name"
+          name="form_name"
           className={styles.input}
           placeholder={name}
         />
@@ -81,7 +83,11 @@ function ContactForm() {
           className={styles.input}
           placeholder={email}
         />
-        <label htmlFor="user_email" className={styles.label}>
+        <label
+          htmlFor="user_email"
+          className={styles.label}
+          {...register("user_email")}
+        >
           Message:
         </label>
         <textarea
@@ -90,11 +96,14 @@ function ContactForm() {
           className={styles.message}
           placeholder={message}
           rows="7"
+          {...register("message", {
+            required: true,
+            maxLength: 255,
+          })}
         />
         <input
           type="submit"
           value="Send"
-          type="submit"
           className={`submitBtn ${styles.submitBtn} `}
         />
       </fieldset>
