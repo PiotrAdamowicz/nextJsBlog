@@ -3,8 +3,21 @@ import styles from "../styles/cv.module.scss";
 import textCV from "../Utils/textContent/cv/textCV";
 import Picture from "../components/picture";
 import LiLogo from "../components/liLogo";
-import { GIT, NEXT, RWD, HTML, CSS, JS, RC } from "../Utils/scripts/imports";
+import {
+  GIT,
+  NEXT,
+  RWD,
+  HTML,
+  CSS,
+  JS,
+  RC,
+  VUE,
+  SASS,
+} from "../Utils/scripts/imports";
 
+//Components-sections
+import Experience from "../components/cv/experience/Expierience";
+//TODO: need refactor: this should be more of composition container component like with Experience also refactor for mapping rather than static typing of html
 const Cv = () => {
   const {
     contactInfo: { name, position, address, phone, email },
@@ -14,10 +27,6 @@ const Cv = () => {
       school2: { school2, schoolDuration2, educationDetails2 },
       school3: { school3, schoolDuration3, educationDetails3 },
       school4: { school4, schoolDuration4, educationDetails4 },
-    },
-    experience: {
-      job1: { jobName1, jobDuration1, jobDetails1 },
-      job2: { jobName2, jobDuration2, jobDetails2 },
     },
     skills,
     languages: { english, javaScript },
@@ -32,7 +41,7 @@ const Cv = () => {
     <>
       <Meta />
       <main className={styles.page_wrap}>
-        <Picture></Picture>
+        <Picture />
         <div className={styles.contact_info}>
           <h1 className={styles.fn}>{name}</h1>
           <h2 className={styles.position}>{position}</h2>
@@ -54,7 +63,7 @@ const Cv = () => {
         <div className={styles.objective}>
           <p>{objective}</p>
         </div>
-
+        <Experience />
         <section className={styles.education}>
           <h3 className={styles.section_header}>EDUCATION</h3>
           <h4 className={styles.school}>{school1}</h4>
@@ -86,33 +95,18 @@ const Cv = () => {
             {educationDetails4}
           </p>
         </section>
-        <section className={styles.experience}>
-          <h3 className={styles.section_header__bg}>EXPERIENCE</h3>
-          <h4>{jobName2}</h4>
-          <p className={styles.paragraph} className={styles.duration}>
-            {jobDuration2}
-          </p>
-          <p className={styles.paragraph} className={styles.details}>
-            {jobDetails2}
-          </p>
-          <h4>{jobName1}</h4>
-          <p className={styles.paragraph} className={styles.duration}>
-            {jobDuration1}
-          </p>
-          <p className={styles.paragraph} className={styles.details}>
-            {jobDetails1}
-          </p>
-        </section>
         <section className={styles.skills}>
           <h3 className={styles.section_header__bg}>SKILLS</h3>
           <ul className={styles.list}>
             <LiLogo skill={skills[0]} source={HTML} />
             <LiLogo skill={skills[1]} source={CSS} />
-            <LiLogo skill={skills[2]} source={JS} size={[31 * 1.3, 32 * 1.3]} />
-            <LiLogo skill={skills[3]} source={RC} />
-            <LiLogo skill={skills[4]} source={GIT} />
-            <LiLogo skill={skills[5]} source={RWD} />
-            <LiLogo skill={skills[6]} source={NEXT} size={[62, 42]} />
+            <LiLogo skill={skills[2]} source={SASS} />
+            <LiLogo skill={skills[3]} source={JS} size={[31 * 1.3, 32 * 1.3]} />
+            <LiLogo skill={skills[4]} source={RC} />
+            <LiLogo skill={skills[5]} source={GIT} />
+            <LiLogo skill={skills[6]} source={RWD} />
+            <LiLogo skill={skills[7]} source={NEXT} size={[62, 42]} />
+            <LiLogo skill={skills[8]} source={VUE} />
           </ul>
         </section>
         <section className={styles.languages}>

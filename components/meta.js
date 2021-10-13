@@ -36,7 +36,7 @@ function useWindowSize() {
 
 const Meta = () => {
   const size = useWindowSize();
-  console.log(size);
+  // console.log(size);
   return (
     <>
       <Head>

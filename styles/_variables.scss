@@ -1,0 +1,41 @@
+@import "./colors";
+
+$size: 10px;
+
+//Margin & Padding
+$margin-bottom-15: 15 * $size;
+$margin-bottom-12: 12 * $size;
+$margin-bottom-10: 10 * $size;
+$margin-bottom-8: 8 * $size;
+$margin-bottom-5: 5 * $size;
+$margin-bottom-3: 3 * $size;
+$margin-bottom-2: 2 * $size;
+$margin-bottom-1: 1 * $size;
+$form-1: 1%;
+$form-2: 2%;
+
+//Font-size
+$tx-size01-0: 1rem;
+$tx-size01-5: 1.5rem;
+$tx-size02-0: 2rem;
+$tx-size00-7: 0.7rem;
+$tx-size00-5: 0.5rem;
+
+//Border
+$brd-r-00-2: 0.2rem;
+$brd-r-00-5: 0.5rem;
+$brd-r-00-7: 0.7rem;
+$brd-r-02-0: 2rem;
+
+@mixin list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@mixin section-header {
+  background-color: $bgh-op6;
+  padding: 2% 3%;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: $margin-bottom-5;
+}

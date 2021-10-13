@@ -7,7 +7,7 @@ const textCV = {
     email: "adamowicz.piotr2@gmail.com",
   },
   objective:
-    "Hi my name is Peter and in my free time I’m learning web development. Right now I’m trying to get experience and my first job as a front-end dev. I like to know how things work from the visual layer through JS frameworks to database and backend solutions.",
+    "Hi, my name is Peter, and I’m an aspiring web developer. Right now I’m trying to get experience and my first job as a front-end dev.",
   education: {
     school1: {
       school1: "VII high school, Białystok",
@@ -55,8 +55,24 @@ const textCV = {
       jobDetails2:
         "My main line of work was: monitoring, diagnosing mobile payments system and supporting second line engineers, merchants and operators.",
     },
+    job3: {
+      jobName3: "SOFTWAREHUT",
+      jobDuration3: "09.2021 – 10.2021",
+      jobDetails3:
+        "Apprenticeships covering professional workflow on the web application. The main project took 3 weeks.",
+    },
   },
-  skills: ["HTML", "CSS", "JavaScript", "React", "Git", "RWD", "Next.js"],
+  skills: [
+    "HTML",
+    "CSS",
+    "Sass",
+    "JavaScript",
+    "React",
+    "Git",
+    "RWD",
+    "Next.js",
+    "Vue 2",
+  ],
 
   languages: {
     english: "Communicative english in speech and writing, level B2.",
@@ -79,6 +95,19 @@ const textCV = {
     "origami",
     "one-pot cooking",
   ],
+};
+const textPortfolio = {
+  projects: {
+    slices: {
+      TRA: { alt: "recruitment task for TRA webpage" },
+    },
+    other: {
+      vuetodo: {
+        alt: "todo app with Vue Vuex and Vutify",
+        link: "https://vuemytodoon.netlify.app/",
+      },
+    },
+  },
 };
 
 export default textCV;

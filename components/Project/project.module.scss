@@ -1,0 +1,34 @@
+@import "../../styles/variables.scss";
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $bg-op2;
+    margin: 1.5rem;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    width: 45%;
+   
+    @media (max-width: 1240px){
+        width: 90%;
+        border: $brd-r-02-0  $bg-op4 solid;
+    }
+    @media(max-width: 1040px){
+        border:none;
+    }
+    &__img{
+        border-radius: 1rem;
+        &Wrapper{
+            margin: auto;
+        }
+    }
+    &__link {
+        margin: 1rem;
+    }
+    &__description{
+        margin: 1rem;
+        text-align: justify;
+    }
+}
+    

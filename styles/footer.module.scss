@@ -1,6 +1,7 @@
 @import "./variables.scss";
 
 .footer {
+  grid-area: contact;
   display: flex;
   background-color: $bg-op7;
   justify-content: space-between;

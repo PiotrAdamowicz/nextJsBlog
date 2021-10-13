@@ -5,3 +5,5 @@ export { default as HTML } from "../../img/icons/html.png";
 export { default as CSS } from "../../img/icons/css-3.png";
 export { default as JS } from "../../img/icons/javascript-48.png";
 export { default as RC } from "../../img/icons/react-40.png";
+export { default as VUE } from "../../img/icons/vue.png";
+export { default as SASS } from "../../img/icons/sass.png";

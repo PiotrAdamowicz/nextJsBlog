@@ -1,0 +1,22 @@
+.experience {
+  grid-area: experience;
+  margin-bottom: $margin-bottom-10;
+  & > .section_header__bg {
+    background-color: $bgh-op6;
+    padding: 2% 3%;
+    text-align: center;
+    border-radius: 10px;
+
+    margin-bottom: $margin-bottom-5;
+  }
+  & > .duration {
+    margin-bottom: $margin-bottom-2;
+  }
+  & > h4,
+  p {
+    margin-bottom: $margin-bottom-2;
+  }
+  & > .details {
+    margin-bottom: $margin-bottom-10;
+  }
+}

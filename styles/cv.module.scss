@@ -11,26 +11,27 @@ main.page_wrap {
     "pic pic"
     "contact contact"
     "objective objective"
-    "education education"
     "experience experience"
+    "education education"
     "languages languages"
     "skills skills"
     "interest interest"
-    "links links";
-  .section_header {
-    margin-bottom: $margin-bottom-10;
-    background-color: $bgh-op6;
-    padding: 2% 3%;
-    text-align: center;
-    border-radius: 10px;
-  }
+    "links links"
+    "footer footer";
+  // .section_header {
+  //   margin-bottom: $margin-bottom-8;
+  //   background-color: $bgh-op6;
+  //   padding: 2% 3%;
+  //   text-align: center;
+  //   border-radius: 10px;
+  // }
   p {
     margin-right: 5%;
     margin-left: 5%;
   }
   & > section > h4,
   p {
-    margin-bottom: $margin-bottom-2;
+    margin-bottom: $margin-bottom-1;
   }
 
   a {
@@ -39,6 +40,15 @@ main.page_wrap {
   }
   .details {
     margin-bottom: $margin-bottom-10;
+  }
+}
+
+.section {
+  &_header__bg {
+    @include section-header;
+  }
+  &_wrapper {
+    margin: 0 $margin-bottom-3;
   }
 }
 
@@ -101,13 +111,8 @@ main.page_wrap {
 .experience {
   grid-area: experience;
   margin-bottom: $margin-bottom-10;
-  & > .section_header__bg {
-    background-color: $bgh-op6;
-    padding: 2% 3%;
-    text-align: center;
-    border-radius: 10px;
-
-    margin-bottom: $margin-bottom-5;
+  .companyName {
+    margin-bottom: $margin-bottom-2;
   }
   & > .duration {
     margin-bottom: $margin-bottom-2;
@@ -235,8 +240,8 @@ main.page_wrap {
     grid-template-areas:
       "contact pic"
       "objective pic"
-      "education education"
       "experience experience"
+      "education education"
       "languages languages"
       "skills skills"
       "interest interest"
@@ -263,8 +268,8 @@ main.page_wrap {
     grid-template-areas:
       "contact pic"
       "objective objective"
-      "education education"
       "experience experience"
+      "education education"
       "languages languages"
       "skills interest"
       "links links";
