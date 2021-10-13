@@ -9,7 +9,6 @@ const Layout = (props) => {
     <>
       <Meta />
       <main>{props.children}</main>
-      <Footer></Footer>
       <style jsx>{`
         main {
           display: flex;
